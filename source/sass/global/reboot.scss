@@ -20,7 +20,7 @@ html {
   font-size: v.$fz-default;
   line-height: 24px;
   font-family: v.$ff-roboto;
-  color: v.$color-default-black;
+  color: v.$color-font-blue;
 
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
@@ -38,7 +38,7 @@ body {
 }
 
 a {
-  color: v.$color-default-black;
+  color: inherit;
   text-decoration: none;
 }
 
@@ -46,7 +46,8 @@ img,
 video {
   display: block;
   max-width: 100%;
-  height: auto;
+  //height: auto;
+  object-fit: cover;
 }
 
 textarea {
@@ -128,5 +129,9 @@ button,
 [type="button"],
 [type="reset"],
 [type="submit"] {
+  color: inherit;
   appearance: none;
+  background-color: v.$color-transparent;
+  border: solid 2px v.$color-default-white;
+  padding: 20px;
 }

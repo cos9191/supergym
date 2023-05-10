@@ -1,5 +1,16 @@
-.footer {
-  padding: 40px 0;
+@use "../variables" as v;
+@use "../mixins" as m;
 
-  background-color: $color-neon-blue;
+.footer {
+  background-color: v.$color-footer-bg;
+  color: v.$color-default-white;
+
+  &__container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+
+    padding-top: 41px;
+    padding-bottom: 42px;
+  }
 }

@@ -1,36 +1,44 @@
 mixin header(headerMods, currentUrl)
-  -
-    const headerLinks = [
-      {
-        href: "index.html",
-        text: "Главная"
-      },
-      {
-        href: "#",
-        text: "Страница 2"
-      },
-      {
-        href: "#",
-        text: "Страница 3"
-      },
-    ]
 
   header.header(class=headerMods)
-    .container
-      if(currentUrl === "index.html")
-        //- lighthouse снимает 10 баллов SEO за <a> без href
-        span.header__logo Логотип
-      else
-        a.header__logo(href="index.html", aria-label="Переход на главную") Логотип
-      nav.main-nav
-        button.main-nav__toggle.btn-reset(type="button", aria-label="Переключатель отображения меню", aria-pressed="false")
-          +icon("icon-burger", 20, 20)
-        .main-nav__wrapper
-          ul.main-nav__list
-            each link in headerLinks
-              - const activeState = currentUrl === link.href
-              li.main-nav__item
-                if(activeState)
-                  span.main-nav__link.is-active=link.text
-                else
-                  a.main-nav__link(href=link.href)=link.text
+    //+picture("content/header", "bg-desktop", "jpg", "100%", "100%", ".")
+    .container.header__container
+      .header__top
+        a.header__logo(href="index.html", aria-label="Переход на главную") Supergym
+        a.header__phone(href="tel:+78005555555") 8-800-555-55-55
+      .header__membership
+        ul.header__membership-feature-list
+            li Тренажёрный зал
+            li Групповые занятия
+            li Кардио-зона
+        .header__membership-city Омск
+        h1.header__membership-title
+            | Фитнес
+            br
+            | центр
+        .header__membership-btn
+          button Купить абонемент
+        .header__membership-img
+          +picture("content/header", "membership-desktop", "jpg", 500, 556, ".")
+
+  //header.header(class=headerMods)
+  //  +picture("content/header", "bg-desktop", "jpg", "100%", "100%", ".")
+  //  .container.header__container
+  //    .header__top
+  //      a.header__logo(href="index.html", aria-label="Переход на главную") Supergym
+  //      a.header__phone(href="tel:+78005555555") 8-800-555-55-55
+  //    .header__membership
+  //      .header__membership-column.header__membership-column--center
+  //        ul.header__membership-feature-list
+  //          li Тренажёрный зал
+  //          li Групповые занятия
+  //          li Кардио-зона
+  //      .header__membership-column.header__membership-column--gap.header__membership-column--padding-bottom
+  //        span.header__membership-city Омск
+  //        h1
+  //          | Фитнес
+  //          br
+  //          | центр
+  //        button.header__membership-btn Купить абонемент
+  //      .header__membership-column.header__membership-column--img
+  //        +picture("content/header", "membership-desktop", "jpg", 500, 556, ".")
