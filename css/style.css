@@ -444,7 +444,7 @@ html {
   font-size: 16px;
   line-height: 24px;
   font-family: "Roboto Condensed", "Arial", sans-serif;
-  color: #000000;
+  color: #102654;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   text-rendering: optimizeLegibility;
@@ -457,7 +457,7 @@ body {
 }
 
 a {
-  color: #000000;
+  color: inherit;
   text-decoration: none;
 }
 
@@ -465,7 +465,8 @@ img,
 video {
   display: block;
   max-width: 100%;
-  height: auto;
+  -o-object-fit: cover;
+  object-fit: cover;
 }
 
 textarea {
@@ -562,9 +563,13 @@ button,
 [type=button],
 [type=reset],
 [type=submit] {
+  color: inherit;
   -webkit-appearance: none;
   -moz-appearance: none;
   appearance: none;
+  background-color: rgba(255, 255, 255, 0);
+  border: solid 2px #ffffff;
+  padding: 20px;
 }
 
 .wrapper {
@@ -644,18 +649,146 @@ button,
 }
 
 .header {
-  padding: 28px 0;
-  background-color: #2c39f2;
+  min-height: 658px;
+  height: 658px;
+  color: #ffffff;
+  background: conic-gradient(from 150.87deg at 16.03% 39.06%, #B80027 -46.69deg, #003D85 32.24deg, #B80027 313.31deg, #003D85 392.24deg);
 }
 
-.header .container {
+.header__container {
+  z-index: 1;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  padding: 30px 103px 50px;
+}
+
+.header__top {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+  -webkit-box-pack: justify;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+  -webkit-box-align: end;
+  -ms-flex-align: end;
+  align-items: flex-end;
 }
 
 .header__logo {
-  color: #ffffff;
+  text-transform: uppercase;
+  font-family: "Alumni Sans", "Arial", sans-serif;
+  font-size: 36px;
+  line-height: 43px;
+  font-weight: 600;
+  letter-spacing: 0.02em;
+}
+
+.header__phone {
+  -ms-flex-item-align: start;
+  align-self: flex-start;
+  justify-self: flex-end;
+  font-family: "Alumni Sans", "Arial", sans-serif;
+  font-size: 26px;
+  line-height: 31px;
+  font-weight: 600;
+  letter-spacing: 0.03em;
+}
+
+.header__membership {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: minmax(10px, 150px) minmax(10px, auto) minmax(10px, 556px);
+  grid-template-columns: minmax(10px, 150px) minmax(10px, auto) minmax(10px, 556px);
+  grid-template-areas: "features city image" "features title image" "features button image";
+  -webkit-box-align: end;
+  -ms-flex-align: end;
+  align-items: flex-end;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  padding-right: 120px;
+  margin-top: -21px;
+}
+
+.header__membership-img {
+  -ms-grid-row: 1;
+  -ms-grid-row-span: 3;
+  -ms-grid-column: 3;
+  grid-area: image;
+  margin-left: 64px;
+}
+
+.header__membership-feature-list {
+  -ms-grid-row: 1;
+  -ms-grid-row-span: 3;
+  -ms-grid-column: 1;
+  grid-area: features;
+  -ms-grid-row-align: center;
+  align-self: center;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: minmax(10px, 1fr);
+  grid-template-columns: minmax(10px, 1fr);
+  list-style-type: none;
+  text-align: end;
+  margin: 0;
+  padding: 110px 0 10px;
+  font-size: 14px;
+  line-height: 21px;
+}
+
+.header__membership-city {
+  -ms-grid-row: 1;
+  -ms-grid-column: 2;
+  grid-area: city;
+  text-align: end;
+  padding-right: 50px;
+  font-family: "Alumni Sans", "Arial", sans-serif;
+  font-size: 48px;
+  line-height: 57.6px;
+  font-weight: 600;
+  letter-spacing: 0.03em;
+  text-transform: uppercase;
+}
+
+.header__membership-title {
+  -ms-grid-row: 2;
+  -ms-grid-column: 2;
+  grid-area: title;
+  margin: 0;
+  text-align: end;
+  font-family: "Alumni Sans", "Arial", sans-serif;
+  font-size: 92px;
+  line-height: 110.4px;
+  font-weight: 600;
+  letter-spacing: 0.05em;
+}
+
+.header__membership-btn {
+  -ms-grid-row: 3;
+  -ms-grid-column: 2;
+  grid-area: button;
+  justify-self: flex-end;
+  padding-bottom: 50px;
+}
+
+.header__membership-btn button {
+  padding: 22px;
+  min-width: 228px;
+  font-weight: 700;
+  font-size: 12px;
+  line-height: 14px;
+  letter-spacing: 0.05em;
+  border: solid 4px #ffffff;
 }
 
 .main-nav__list {
@@ -686,8 +819,21 @@ button,
 }
 
 .footer {
-  padding: 40px 0;
-  background-color: #2c39f2;
+  background-color: #030a1a;
+  color: #ffffff;
+}
+
+.footer__container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+  -webkit-box-pack: justify;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+  padding-top: 41px;
+  padding-bottom: 42px;
 }
 
 .modal {
@@ -1716,6 +1862,76 @@ button,
   }
 }
 
+@media (max-width: 1349px) {
+  .header__membership {
+    margin-top: 0;
+    padding-right: 0;
+  }
+}
+
+@media (max-width: 1200px) {
+  .header {
+    min-height: 554px;
+    height: 554px;
+  }
+
+  .header__container {
+    gap: 25px;
+    padding: 30px 45px 82px;
+  }
+
+  .header__top {
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+  }
+
+  .header__logo {
+    font-size: 24px;
+    line-height: 28.8px;
+    font-weight: 700;
+    letter-spacing: 0.02em;
+  }
+
+  .header__phone {
+    -ms-flex-item-align: center;
+    -ms-grid-row-align: center;
+    align-self: center;
+    font-size: 24px;
+    line-height: 28.8px;
+    font-weight: 700;
+    letter-spacing: 0.02em;
+  }
+
+  .header__membership-img {
+    margin-left: 30px;
+  }
+
+  .header__membership-img img {
+    width: 324px;
+    height: 390px;
+  }
+
+  .header__membership-city {
+    padding-right: 0;
+    font-size: 34px;
+    line-height: 40.8px;
+  }
+
+  .header__membership-title {
+    font-size: 72px;
+    line-height: 86.4px;
+  }
+
+  .header__membership-btn {
+    padding-bottom: 25px;
+  }
+
+  .header__membership-btn button {
+    min-width: 181px;
+  }
+}
+
 @media (max-width: 1023px) {
   .container {
     padding: 0 24px;
@@ -1725,6 +1941,76 @@ button,
 @media (max-width: 767px) {
   .container {
     padding: 0 16px;
+  }
+
+  .header {
+    min-height: 491px;
+    height: 491px;
+  }
+
+  .header__container {
+    padding: 20px 15px 80px;
+  }
+
+  .header__logo {
+    font-size: 20px;
+    line-height: 24px;
+  }
+
+  .header__phone {
+    font-size: 20px;
+    line-height: 24px;
+  }
+
+  .header__membership {
+    -ms-grid-columns: minmax(10px, auto) minmax(10px, auto);
+    grid-template-columns: minmax(10px, auto) minmax(10px, auto);
+    grid-template-areas: "city city" "features title" "button button";
+  }
+
+  .header__membership-img {
+    display: none;
+  }
+
+  .header__membership-feature-list {
+    margin-right: -10px;
+  }
+
+  .header__membership-city {
+    font-size: 28px;
+    line-height: 33.6px;
+  }
+
+  .header__membership-feature-list {
+    -ms-grid-row: 2;
+    -ms-grid-row-span: 1;
+    -ms-grid-column: 1;
+  }
+
+  .header__membership-city {
+    -ms-grid-row: 1;
+    -ms-grid-column: 1;
+    -ms-grid-column-span: 2;
+  }
+
+  .header__membership-title {
+    -ms-grid-row: 2;
+    -ms-grid-column: 2;
+  }
+
+  .header__membership-btn {
+    -ms-grid-row: 3;
+    -ms-grid-column: 1;
+    -ms-grid-column-span: 2;
+  }
+
+  .header__membership-btn {
+    padding-bottom: 0;
+    width: 100%;
+  }
+
+  .header__membership-btn button {
+    width: 100%;
   }
 
   .modal__wrapper {
@@ -1801,6 +2087,44 @@ button,
     -webkit-transform: translateY(calc(-50% - 5px));
     -ms-transform: translateY(calc(-50% - 5px));
     transform: translateY(calc(-50% - 5px));
+  }
+}
+
+@media (max-width: 319px) {
+  .header__membership {
+    -ms-grid-columns: minmax(10px, auto);
+    grid-template-columns: minmax(10px, auto);
+    gap: 20px;
+    -ms-grid-rows: auto 20px auto 20px auto 20px auto;
+    grid-template-areas: "city" "title" "features" "button";
+  }
+
+  .header__membership-feature-list {
+    margin-right: 0;
+    padding: 0;
+  }
+
+  .header__membership-feature-list {
+    -ms-grid-row: 5;
+    -ms-grid-row-span: 1;
+    -ms-grid-column: 1;
+  }
+
+  .header__membership-city {
+    -ms-grid-row: 1;
+    -ms-grid-column: 1;
+    -ms-grid-column-span: 1;
+  }
+
+  .header__membership-title {
+    -ms-grid-row: 3;
+    -ms-grid-column: 1;
+  }
+
+  .header__membership-btn {
+    -ms-grid-row: 7;
+    -ms-grid-column: 1;
+    -ms-grid-column-span: 1;
   }
 }
 
