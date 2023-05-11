@@ -570,6 +570,7 @@ button,
   background-color: rgba(255, 255, 255, 0);
   border: solid 2px #ffffff;
   padding: 20px;
+  cursor: pointer;
 }
 
 .wrapper {
@@ -652,7 +653,7 @@ button,
   min-height: 658px;
   height: 658px;
   color: #ffffff;
-  background: conic-gradient(from 150.87deg at 16.03% 39.06%, #B80027 -46.69deg, #003D85 32.24deg, #B80027 313.31deg, #003D85 392.24deg);
+  background: conic-gradient(from 150.87deg at 16.03% 39.06%, #b80027 -46.69deg, #003d85 32.24deg, #b80027 313.31deg, #003d85 392.24deg);
 }
 
 .header__container {
@@ -670,6 +671,8 @@ button,
 }
 
 .header__top {
+  position: relative;
+  z-index: 1;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -690,6 +693,13 @@ button,
   line-height: 43px;
   font-weight: 600;
   letter-spacing: 0.02em;
+  -webkit-transition: opacity 0.3s ease;
+  -o-transition: opacity 0.3s ease;
+  transition: opacity 0.3s ease;
+}
+
+.header__logo.focus-visible:focus {
+  opacity: 0.6;
 }
 
 .header__phone {
@@ -701,6 +711,13 @@ button,
   line-height: 31px;
   font-weight: 600;
   letter-spacing: 0.03em;
+  -webkit-transition: opacity 0.3s ease;
+  -o-transition: opacity 0.3s ease;
+  transition: opacity 0.3s ease;
+}
+
+.header__phone.focus-visible:focus {
+  opacity: 0.6;
 }
 
 .header__membership {
@@ -789,6 +806,13 @@ button,
   line-height: 14px;
   letter-spacing: 0.05em;
   border: solid 4px #ffffff;
+  -webkit-transition: opacity 0.3s ease;
+  -o-transition: opacity 0.3s ease;
+  transition: opacity 0.3s ease;
+}
+
+.header__membership-btn button.focus-visible:focus {
+  opacity: 0.6;
 }
 
 .main-nav__list {
@@ -832,8 +856,74 @@ button,
   -webkit-box-pack: justify;
   -ms-flex-pack: justify;
   justify-content: space-between;
-  padding-top: 41px;
-  padding-bottom: 42px;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  padding: 37px 104px;
+}
+
+.footer__logo {
+  text-transform: uppercase;
+  font-family: "Alumni Sans", "Arial", sans-serif;
+  font-weight: 600;
+  font-size: 26px;
+  line-height: 31.2px;
+  letter-spacing: 0.02em;
+  padding: 5px;
+  -webkit-transition: opacity 0.3s ease;
+  -o-transition: opacity 0.3s ease;
+  transition: opacity 0.3s ease;
+}
+
+.footer__logo.focus-visible:focus {
+  opacity: 0.6;
+}
+
+.footer__nav-list {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+  gap: 30px;
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+
+.footer__nav-list a {
+  padding: 5px;
+  font-size: 14px;
+  line-height: 16.41px;
+  -webkit-transition: opacity 0.3s ease;
+  -o-transition: opacity 0.3s ease;
+  transition: opacity 0.3s ease;
+}
+
+.footer__nav-list a.focus-visible:focus {
+  opacity: 0.6;
+}
+
+.footer__socials-list {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+
+.footer__socials-list a {
+  padding: 5px;
+  -webkit-transition: opacity 0.3s ease;
+  -o-transition: opacity 0.3s ease;
+  transition: opacity 0.3s ease;
+}
+
+.footer__socials-list a.focus-visible:focus {
+  opacity: 0.6;
 }
 
 .modal {
@@ -1930,6 +2020,20 @@ button,
   .header__membership-btn button {
     min-width: 181px;
   }
+
+  .footer__container {
+    padding: 40px 45px;
+  }
+
+  .footer__logo {
+    font-weight: 700;
+    font-size: 24px;
+    line-height: 28.8px;
+  }
+
+  .footer__nav-list {
+    gap: 20px;
+  }
 }
 
 @media (max-width: 1023px) {
@@ -2011,6 +2115,43 @@ button,
 
   .header__membership-btn button {
     width: 100%;
+  }
+
+  .footer__container {
+    display: -ms-grid;
+    display: grid;
+    -ms-grid-columns: minmax(10px, 1fr);
+    grid-template-columns: minmax(10px, 1fr);
+    padding: 16px 10px 47px;
+  }
+
+  .footer__logo {
+    -webkit-transform: translateY(30px);
+    -ms-transform: translateY(30px);
+    transform: translateY(30px);
+    font-weight: 600;
+    font-size: 20px;
+    line-height: 24px;
+  }
+
+  .footer__nav-list {
+    display: block;
+    -webkit-column-count: 2;
+    -moz-column-count: 2;
+    column-count: 2;
+  }
+
+  .footer__nav-list li:first-child {
+    margin-top: 24px;
+  }
+
+  .footer__nav-list a {
+    font-size: 16px;
+    line-height: 18.75px;
+  }
+
+  .footer__socials-list {
+    margin-top: 35px;
   }
 
   .modal__wrapper {
@@ -2129,6 +2270,30 @@ button,
 }
 
 @media (hover: hover) {
+  .header__logo:hover:not(.focus-visible) {
+    opacity: 0.6;
+  }
+
+  .header__phone:hover:not(.focus-visible) {
+    opacity: 0.6;
+  }
+
+  .header__membership-btn button:hover:not(.focus-visible) {
+    opacity: 0.6;
+  }
+
+  .footer__logo:hover:not(.focus-visible) {
+    opacity: 0.6;
+  }
+
+  .footer__nav-list a:hover:not(.focus-visible) {
+    opacity: 0.6;
+  }
+
+  .footer__socials-list a:hover:not(.focus-visible) {
+    opacity: 0.6;
+  }
+
   .btn:hover:not(.focus-visible) {
     opacity: 0.8;
   }
