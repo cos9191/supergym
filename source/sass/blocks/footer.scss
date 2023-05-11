@@ -9,8 +9,115 @@
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
+    align-items: center;
 
-    padding-top: 41px;
-    padding-bottom: 42px;
+    padding: 37px 104px;
+
+    @include m.vp-1200 {
+      padding: 40px 45px;
+    }
+
+    @include m.vp-767 {
+      display: grid;
+      grid-template-columns: minmax(10px, 1fr);
+
+      padding: 16px 10px 47px;
+    }
+  }
+
+  &__logo {
+    text-transform: uppercase;
+    font-family: v.$ff-alumni;
+    font-weight: 600;
+    font-size: 26px;
+    line-height: 31.2px;
+    letter-spacing: 0.02em;
+
+    padding: 5px;
+
+    transition: opacity v.$trans-default;
+
+    @include m.hover-focus {
+      opacity: 0.6;
+    }
+
+    @include m.vp-1200 {
+      font-weight: 700;
+      font-size: 24px;
+      line-height: 28.8px;
+    }
+
+    @include m.vp-767 {
+      transform: translateY(30px);
+
+      font-weight: 600;
+      font-size: 20px;
+      line-height: 24px;
+    }
+  }
+
+  &__nav-list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 30px;
+
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+
+    @include m.vp-1200 {
+      gap: 20px;
+    }
+
+    @include m.vp-767 {
+      display: block;
+      column-count: 2;
+    }
+
+    li:first-child {
+      @include m.vp-767 {
+        margin-top: 24px;
+      }
+    }
+
+    a {
+      padding: 5px;
+
+      font-size: 14px;
+      line-height: 16.41px;
+
+      transition: opacity v.$trans-default;
+
+      @include m.hover-focus {
+        opacity: 0.6;
+      }
+
+      @include m.vp-767 {
+        font-size: 16px;
+        line-height: 18.75px;
+      }
+    }
+  }
+
+  &__socials-list {
+    display: flex;
+    flex-wrap: wrap;
+
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+
+    @include m.vp-767 {
+      margin-top: 35px;
+    }
+
+    a {
+      padding: 5px;
+      transition: opacity v.$trans-default;
+
+      @include m.hover-focus {
+        opacity: 0.6;
+      }
+    }
   }
 }

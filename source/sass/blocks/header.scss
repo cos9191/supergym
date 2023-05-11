@@ -8,10 +8,10 @@
   color: v.$color-default-white;
   background: conic-gradient(
     from 150.87deg at 16.03% 39.06%,
-    #B80027 -46.69deg,
-    #003D85 32.24deg,
-    #B80027 313.31deg,
-    #003D85 392.24deg
+    #b80027 -46.69deg,
+    #003d85 32.24deg,
+    #b80027 313.31deg,
+    #003d85 392.24deg
   );
 
   @include m.vp-1200 {
@@ -44,6 +44,9 @@
   }
 
   &__top {
+    position: relative;
+    z-index: 1;
+
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
@@ -61,6 +64,12 @@
     line-height: 43px;
     font-weight: 600;
     letter-spacing: 0.02em;
+
+    transition: opacity v.$trans-default;
+
+    @include m.hover-focus {
+      opacity: 0.6;
+    }
 
     @include m.vp-1200 {
       font-size: 24px;
@@ -85,6 +94,12 @@
     font-weight: 600;
     letter-spacing: 0.03em;
 
+    transition: opacity v.$trans-default;
+
+    @include m.hover-focus {
+      opacity: 0.6;
+    }
+
     @include m.vp-1200 {
       align-self: center;
 
@@ -104,9 +119,9 @@
     display: grid;
     grid-template-columns: minmax(10px, 150px) minmax(10px, auto) minmax(10px, 556px);
     grid-template-areas:
-        "features city image"
-        "features title image"
-        "features button image";
+      "features city image"
+      "features title image"
+      "features button image";
     align-items: flex-end;
     justify-content: center;
 
@@ -253,6 +268,12 @@
 
       border: solid 4px v.$color-default-white;
 
+      transition: opacity v.$trans-default;
+
+      @include m.hover-focus {
+        opacity: 0.6;
+      }
+
       @include m.vp-1200 {
         min-width: 181px;
       }
@@ -263,275 +284,3 @@
     }
   }
 }
-
-
-//.header {
-//  position: relative;
-//  display: grid;
-//
-//  min-height: 658px;
-//  height: 658px;
-//
-//  color: v.$color-default-white;
-//  //background: conic-gradient(from 150deg at 20% 30%, #003D85 8.95%, #B80027 87.03%);
-//
-//  @include m.vp-1200 {
-//    min-height: 554px;
-//    height: 554px;
-//  }
-//
-//  @include m.vp-767 {
-//    min-height: 491px;
-//    height: 491px;
-//  }
-//
-//  > * {
-//    grid-area: 1/-1;
-//  }
-//
-//  picture {
-//    display: flex;
-//    align-items: center;
-//    justify-content: center;
-//
-//    width: 100%;
-//    height: auto;
-//    min-height: 100%;
-//    max-height: none;
-//
-//    object-fit: cover;
-//  }
-//
-//  &__container {
-//    z-index: 1;
-//
-//    display: flex;
-//    flex-wrap: wrap;
-//
-//    padding: 30px 103px 50px;
-//
-//    @include m.vp-1200 {
-//      padding: 30px 45px 82px;
-//    }
-//
-//    @include m.vp-767 {
-//      padding: 20px 15px 80px;
-//    }
-//  }
-//
-//  &__top {
-//    display: flex;
-//    flex-wrap: wrap;
-//    justify-content: space-between;
-//    align-items: flex-end;
-//
-//    width: 100%;
-//
-//    @include m.vp-1200 {
-//      align-items: center;
-//    }
-//  }
-//
-//  &__logo {
-//    text-transform: uppercase;
-//    font-family: v.$ff-alumni;
-//    font-size: 36px;
-//    line-height: 43px;
-//    font-weight: 600;
-//    letter-spacing: 0.02em;
-//
-//    @include m.vp-1200 {
-//      font-size: 24px;
-//      line-height: 28.8px;
-//      font-weight: 700;
-//      letter-spacing: 0.02em;
-//    }
-//
-//    @include m.vp-767 {
-//      font-size: 20px;
-//      line-height: 24px;
-//    }
-//  }
-//
-//  &__phone {
-//    align-self: flex-start;
-//
-//    font-family: v.$ff-alumni;
-//    font-size: 26px;
-//    line-height: 31px;
-//    font-weight: 600;
-//    letter-spacing: 0.03em;
-//
-//    @include m.vp-1200 {
-//      align-self: center;
-//
-//      font-size: 24px;
-//      line-height: 28.8px;
-//      font-weight: 700;
-//      letter-spacing: 0.02em;
-//    }
-//
-//    @include m.vp-767 {
-//      font-size: 20px;
-//      line-height: 24px;
-//    }
-//  }
-//
-//  &__membership {
-//    display: flex;
-//    flex-wrap: wrap;
-//    align-items: flex-end;
-//    justify-content: center;
-//
-//    width: 100%;
-//    padding-right: 120px;
-//    margin-top: -21px;
-//
-//    @include m.vp-1349 {
-//      margin-top: 0;
-//      padding-right: 0;
-//    }
-//
-//    @include m.vp-767 {
-//      display: grid;
-//      grid-template-areas:
-//        "city city"
-//        "features title"
-//        "button button";
-//    }
-//
-//    picture img {
-//      @include m.vp-1200 {
-//        width: 324px;
-//        height: 390px;
-//      }
-//    }
-//  }
-//
-//  &__membership-feature-list {
-//    list-style-type: none;
-//    text-align: end;
-//
-//    margin: 0;
-//    padding-left: 0;
-//
-//    font-size: 14px;
-//    line-height: 21px;
-//
-//    @include m.vp-767 {
-//      grid-area: features;
-//    }
-//  }
-//
-//  &__membership-column {
-//    display: grid;
-//    grid-template-columns: minmax(10px, 1fr);
-//  }
-//
-//  &__membership-column--center {
-//    align-self: center;
-//    padding: 110px 0 10px;
-//  }
-//
-//  &__membership-column--gap {
-//    gap: 50px;
-//
-//    @include m.vp-1200 {
-//      gap: 30px;
-//    }
-//  }
-//
-//  &__membership-column--padding-bottom {
-//    padding-bottom: 50px;
-//
-//    @include m.vp-1200 {
-//      padding-bottom: 25px;
-//    }
-//
-//    @include m.vp-767 {
-//      padding-bottom: 0;
-//    }
-//  }
-//
-//  &__membership-column--img {
-//    margin-left: 64px;
-//
-//    @include m.vp-1200 {
-//      margin-left: 30px;
-//    }
-//
-//    @include m.vp-767 {
-//      display: none;
-//    }
-//  }
-//
-//  &__membership-city {
-//    text-align: end;
-//    padding-right: 50px;
-//
-//    font-family: v.$ff-alumni;
-//    font-size: 48px;
-//    line-height: 57.6px;
-//    font-weight: 600;
-//    letter-spacing: 0.03em;
-//
-//    text-transform: uppercase;
-//
-//    @include m.vp-1200 {
-//      padding-right: 0;
-//
-//      font-size: 34px;
-//      line-height: 40.8px;
-//    }
-//
-//    @include m.vp-767 {
-//      grid-area: city;
-//
-//      font-size: 28px;
-//      line-height: 33.6px;
-//    }
-//  }
-//
-//  h1 {
-//    margin: 0;
-//    text-align: end;
-//
-//    font-family: v.$ff-alumni;
-//    font-size: 92px;
-//    line-height: 110.4px;
-//    font-weight: 600;
-//    letter-spacing: 0.05em;
-//
-//    @include m.vp-1200 {
-//      font-size: 72px;
-//      line-height: 86.4px;
-//    }
-//
-//    @include m.vp-767 {
-//      grid-area: title;
-//    }
-//  }
-//
-//  &__membership-btn {
-//    justify-self: flex-end;
-//    padding: 22px;
-//    min-width: 228px;
-//    max-width: 228px;
-//
-//    font-weight: 700;
-//    font-size: 12px;
-//    line-height: 14px;
-//    letter-spacing: 0.05em;
-//
-//    border: solid 4px v.$color-default-white;
-//
-//    @include m.vp-1200 {
-//      min-width: 181px;
-//    }
-//
-//    @include m.vp-767 {
-//      grid-area: button;
-//      width: 100%;
-//    }
-//  }
-//}

@@ -1,6 +1,48 @@
 mixin footer(footerMods)
+  -
+    const navLinks = [
+      {
+        href: "#",
+        text: "Услуги",
+        ariaLabel: "Перейти к разделу Услуги"
+      },
+      {
+        href: "#",
+        text: "Абонементы",
+        ariaLabel: "Перейти к разделу Абонементы"
+      },
+      {
+        href: "#",
+        text: "Акции",
+        ariaLabel: "Перейти к разделу Акции"
+      },
+      {
+        href: "#",
+        text: "Тренеры",
+        ariaLabel: "Перейти к разделу Тренеры"
+      },
+      {
+        href: "#",
+        text: "Расписание",
+        ariaLabel: "Перейти к разделу Расписание"
+      },
+    ]
+
   footer.footer(class=footerMods)
     .container.footer__container
       a.footer__logo(href="index.html", aria-label="Переход на главную") Supergym
-      .footer_nav-wrapper nav-wrapper
-      .footer_socials-wrapper socials-wrapper
+      ul.footer__nav-list
+        each link in navLinks
+          li
+            a(href=link.href, aria-label=link.ariaLabel)=link.text
+      ul.footer__socials-list
+        li
+          a(target="_blank" href="https://vk.com/htmlacademy")
+            span.visually-hidden Мы Вконтакте.
+            +icon("socials_vk", 25, 25)
+          a(target="_blank" href="https://vk.com/htmlacademy")
+            span.visually-hidden Мы в Одноклассниках.
+            +icon("socials_ok", 25, 25)
+          a(target="_blank" href="https://vk.com/htmlacademy")
+            span.visually-hidden Мы в Reddit.
+            +icon("socials_reddit", 25, 25)
