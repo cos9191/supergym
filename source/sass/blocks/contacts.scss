@@ -1,0 +1,169 @@
+@use "../variables" as v;
+@use "../mixins" as m;
+
+.sections-wrapper {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(10px, 1fr));
+
+  @include m.vp-1200 {
+    grid-template-columns: repeat(1, minmax(10px, 1fr));
+  }
+
+  .container {
+    margin: 0 auto 0 0;
+    padding-top: 56px;
+    padding-bottom: 70px;
+    max-width: 683px;
+
+    @include m.vp-1200 {
+      margin: 0 auto;
+    }
+
+    @include m.vp-769 {
+      margin: 0;
+    }
+
+    @include m.vp-767 {
+      padding-left: 5%;
+      padding-right: 5%;
+      max-width: 100%;
+    }
+  }
+
+  h2,
+  dl,
+  dd {
+    margin: 0;
+  }
+
+  h2 {
+    font-family: v.$ff-alumni;
+    font-weight: 700;
+    font-size: 54px;
+    line-height: 64.8px;
+    letter-spacing: 0.03em;
+
+    @include m.vp-1200 {
+      font-size: 42px;
+      line-height: 50.4px;
+    }
+
+    @include m.vp-767 {
+      font-weight: 600;
+      font-size: 32px;
+      line-height: 38.4px;
+    }
+  }
+
+  dt:not(:first-child) {
+    margin-top: 30px;
+  }
+
+  dt {
+    font-weight: 700;
+
+    @include m.vp-1200 {
+      font-size: 20px;
+      line-height: 30px;
+    }
+  }
+
+  dd {
+    font-size: 14px;
+    line-height: 21.33px;
+    margin-top: 10px;
+  }
+
+  a {
+    transition: opacity v.$trans-default;
+
+    @include m.hover-focus {
+      opacity: 0.8;
+    }
+  }
+}
+
+.request {
+  color: v.$color-default-white;
+  background-color: v.$color-font-blue;
+
+  &__container {
+    max-width: 683px;
+
+    @include m.vp-1200 {
+      padding-left: 133px;
+    }
+
+    @include m.vp-767 {
+      max-width: 100%;
+    }
+  }
+
+  &__form {
+    display: grid;
+    gap: 10px;
+    grid-template-columns: minmax(10px, 1fr) minmax(10px, 1fr);
+
+    max-width: 410px;
+
+    @include m.vp-1200 {
+      max-width: 472px;
+    }
+
+    @include m.vp-767 {
+      max-width: 100%;
+      display: flex;
+      flex-direction: column;
+    }
+  }
+
+  &__btn {
+    grid-column: 1 / span 2;
+
+    width: 100%;
+    padding: 21px;
+
+    font-size: 14px;
+    line-height: 16.41px;
+  }
+}
+
+.contacts {
+  color: v.$color-font-blue;
+  background-color: v.$color-default-white;
+
+  &__container {
+    padding-left: 124px;
+  }
+
+  &__columns {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(10px, 1fr));
+
+    margin-top: 40px;
+
+    @include m.vp-767 {
+      grid-template-columns: repeat(1, minmax(10px, 1fr));
+      gap: 30px;
+    }
+  }
+
+  &__column-left {
+    padding-right: 58px;
+    border-right: 1px solid #74819c;
+
+    @include m.vp-767 {
+      padding-right: 0;
+      border-right: none;
+    }
+  }
+
+  &__column-right {
+    padding-left: 60px;
+
+    @include m.vp-767 {
+      padding-left: 0;
+      border-right: none;
+    }
+  }
+}

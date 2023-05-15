@@ -1,8 +1,9 @@
 import {iosVhFix} from './utils/ios-vh-fix';
 import {initModals} from './modules/modals/init-modals';
 import {Form} from './modules/form-validate/form';
-import {CustomSelect} from './modules/select/custom-select';
-import {uploadFile, uploadImageDrop} from './modules/input-file/init-upload';
+// import {CustomSelect} from './modules/select/custom-select';
+// import {uploadFile, uploadImageDrop} from './modules/input-file/init-upload';
+import {initPlayVideo} from './modules/play-video/play-video.js';
 
 // ---------------------------------
 
@@ -13,17 +14,16 @@ window.addEventListener('DOMContentLoaded', () => {
 
   iosVhFix();
 
+
   // Modules
   // ---------------------------------
 
   // все скрипты должны быть в обработчике 'DOMContentLoaded', но не все в 'load'
   // в load следует добавить скрипты, не участвующие в работе первого экрана
   window.addEventListener('load', () => {
+    // initPlayVideo();
+    setTimeout(() => initPlayVideo(), 1500);
     initModals();
-    uploadFile();
-    uploadImageDrop();
-    const select = new CustomSelect();
-    select.init();
     const form = new Form();
     window.form = form;
     form.init();
@@ -43,7 +43,7 @@ window.addEventListener('DOMContentLoaded', () => {
 // выносим все в дата атрибуты
 // url до иконок пинов карты, настройки автопрокрутки слайдера, url к json и т.д.
 
-// для адаптивного JS используейтся matchMedia и addListener
+// для адаптивного JS используется matchMedia и addListener
 // const breakpoint = window.matchMedia(`(min-width:1024px)`);
 // const breakpointChecker = () => {
 //   if (breakpoint.matches) {

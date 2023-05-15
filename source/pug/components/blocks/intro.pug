@@ -1,10 +1,16 @@
 mixin intro()
-  .intro
-    //- вставлять блоки во внешний контейнер неверно
-    //- все блоки содержат в себе container без доп класса tutorial__wrapper
-    .container
-      p(style="margin-top: 40px;") Текст&nbsp;с&nbsp;мнемониками
-
-      p(style="margin-top: 40px;") Пример использования +img()
-      p(style="margin-bottom: 40px;")
-        +img("content", "placeholder", "png", 120, 120, "Пример")
+  section.intro
+    .container.intro__container
+        .intro__column.intro__column--text
+          h2 Тренажерный зал
+          h3 Просторный зал площадью 900 кв/м
+          p Supergym – самый большой фитнес центр за Уралом и идеальное место для укрепления тела и здоровья. Тренажерный зал оснащен всем необходимым современным оборудованием для всех  спортсменов.
+          span В зале расположены отдельная зона для Crossfit и кардио-зона с 40 тренажерами. Также в фитнес центре есть несколько оборудованных залов для различных видов групповых занятий.
+        .intro__column.intro__column--image
+          +picture-adaptive("content/intro", "panorama", "jpg", 660, 401, "Фото спортзала.")
+        .intro__video-wrapper
+          .intro__video-cover(data-cover4video data-video-isShown=false)
+            +picture-adaptive("content/intro", "cover4video", "jpg", 364, 228, "Фото спортзала.")
+          button(data-play-video-button data-video-isShown=false)
+          .intro__video-container
+            div#player(data-video-player data-video-src="9TZXsZItgdw")

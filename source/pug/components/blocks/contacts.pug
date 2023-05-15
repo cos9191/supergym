@@ -1,0 +1,55 @@
+mixin contacts()
+  .sections-wrapper
+      section.request
+        .container.request__container(
+          data-form-validate
+          data-callback="base"
+        )
+          h2 Бесплатное занятие
+          form.request__form(
+            method="post"
+            action="https://echo.htmlacademy.ru/"
+          )
+            +custom-input({
+              inputId: "name",
+              inputName: "name",
+              inputPlaceholder: "Имя",
+              ariaLabel: "Ваше имя"
+            })(
+              data-required,
+              data-on-input-validate,
+              data-validate-type="text",
+              data-message-base="Укажите имя",
+              title="Укажите имя",
+            )
+            +custom-input({
+              inputType: "tel",
+              inputId: "phone-number",
+              inputName: "phone-number",
+              inputPlaceholder: "Телефон",
+              ariaLabel: "Ваш номер телефона"
+            })(
+              data-required,
+              data-on-input-validate,
+              data-validate-type="phone",
+              data-message-base="Укажите номер телефона",
+              title="Укажите номер телефона",
+            )
+            button.btn.request__btn(type="submit") отправить
+
+      section.contacts
+        .container.contacts__container
+          h2 Контакты
+          .contacts__columns
+            .contacts__column-left
+              dl
+                dt Адрес:
+                dd: a(href="https://yandex.ru/maps/-/CCUkjSwzXD" target="_blank") г. Омск, ул. 60 лет Октября, 7
+                dt График работы:
+                dd Пн-Вс: с 8:00 до 22:00
+            .contacts__column-right
+              dl
+                dt Телефон:
+                dd: a(href="tel:+78005555555") 8-800-555-55-55
+                dt Email:
+                dd: a(href="mailto:omsk@supergym.ru") omsk@supergym.ru

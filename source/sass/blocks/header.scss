@@ -210,8 +210,6 @@
     font-weight: 600;
     letter-spacing: 0.03em;
 
-    text-transform: uppercase;
-
     @include m.vp-1200 {
       padding-right: 0;
 
@@ -222,6 +220,10 @@
     @include m.vp-767 {
       font-size: 28px;
       line-height: 33.6px;
+    }
+
+    span {
+      font-size: 58px;
     }
   }
 

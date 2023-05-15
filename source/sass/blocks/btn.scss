@@ -1,17 +1,27 @@
+@use "../variables" as v;
+@use "../mixins" as m;
+
 .btn {
   display: inline-flex;
+  justify-content: center;
   padding: 10px 20px;
 
-  color: $color-default-white;
+  color: inherit;
+  font-family: v.$ff-roboto;
+  text-transform: uppercase;
+  font-size: 12px;
+  line-height: 14px;
+  font-weight: 700;
+  letter-spacing: 0.05em;
 
-  background-color: $color-neon-blue;
-  border: none;
+  background-color: transparent;
+  border: 3px solid v.$color-default-white;
   cursor: pointer;
 
-  transition: opacity $trans-default;
+  transition: opacity v.$trans-default;
 
   &--red {
-    background-color: $color-torch-red;
+    background-color: v.$color-torch-red;
   }
 
   &:disabled {
@@ -20,7 +30,7 @@
     pointer-events: none;
   }
 
-  @include hover-focus {
+  @include m.hover-focus {
     opacity: 0.8;
   }
 }
