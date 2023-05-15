@@ -5,7 +5,8 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <meta name="description" content="ProjectName — описание">
+    <meta name="description" content="Supergym – самый большой фитнес центр за Уралом">
+    <meta name="keywords" content="Фитнес центр, спортзал, групповые занятия, кардио, тренажёрный зал">
     <link rel="apple-touch-icon" sizes="180x180" href="/img/favicons/apple-touch-icon.png">
     <link rel="icon" type="image/png" sizes="32x32" href="/img/favicons/favicon-32x32.png">
     <link rel="icon" type="image/png" sizes="16x16" href="/img/favicons/favicon-16x16.png">
@@ -21,6 +22,9 @@
     <link rel="preload" href="./fonts/roboto-condensed-bold.woff2" as="font" type="font/woff2" crossorigin="anonymous">
     <link rel="preload" href="./fonts/roboto-condensed-light.woff2" as="font" type="font/woff2" crossorigin="anonymous">
     <link rel="preload" href="./fonts/roboto-condensed-regular.woff2" as="font" type="font/woff2" crossorigin="anonymous">
+    <link rel="preconnect" href="https://www.youtube.com">
+    <link rel="dns-prefetch" href="https://www.youtube.com">
+    <!--link(rel="preload" href="https://www.youtube.com" as="video")-->
   </head>
   <body>
     <div class="visually-hidden"><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"><symbol id="icon-close" viewBox="0 0 20 20"><g fill="none"><path d="M.293 18.291a1 1 0 101.414 1.414L10 11.413l8.292 8.292a1 1 0 101.414-1.414l-8.292-8.292 8.292-8.292A1 1 0 1018.291.293L9.999 8.585 1.707.293A1 1 0 10.293 1.707L8.585 10 .293 18.291z"/></g></symbol><symbol id="socials_ok" viewBox="0 0 25 25"><g fill="none">
@@ -45,27 +49,95 @@
               <li>Групповые занятия</li>
               <li>Кардио-зона</li>
             </ul>
-            <div class="header__membership-city">Омск</div>
+            <div class="header__membership-city">ОMC<span>к</span></div>
             <h1 class="header__membership-title">Фитнес<br>центр</h1>
             <div class="header__membership-btn">
               <button>Купить абонемент</button>
             </div>
             <div class="header__membership-img">
               <picture>
-                <source type="image/webp" srcset="img/content/header/membership-desktop.webp, img/content/header/membership-desktop@2x.webp 2x"><img src="img/content/header/membership-desktop.jpg" srcset="img/content/header/membership-desktop@2x.jpg 2x" width="500" height="556" alt=".">
+                <source type="image/webp" srcset="img/content/header/membership-desktop.webp, img/content/header/membership-desktop@2x.webp 2x"><img src="img/content/header/membership-desktop.jpg" srcset="img/content/header/membership-desktop@2x.jpg 2x" width="500" height="556" alt="Привлекательный спортсмен.">
               </picture>
             </div>
           </div>
         </div>
       </header>
       <main>
-        <div class="intro">
-          <div class="container">
-            <p style="margin-top: 40px;">Текст&nbsp;с&nbsp;мнемониками</p>
-            <p style="margin-top: 40px;">Пример использования +img()</p>
-            <p style="margin-bottom: 40px;"><img src="img/content/placeholder.png" srcset="img/content/placeholder@2x.png 2x" width="120" height="120" alt="Пример">
-            </p>
+        <section class="intro">
+          <div class="container intro__container">
+            <div class="intro__column intro__column--text">
+              <h2>Тренажерный зал</h2>
+              <h3>Просторный зал площадью 900 кв/м</h3>
+              <p>Supergym – самый большой фитнес центр за Уралом и идеальное место для укрепления тела и здоровья. Тренажерный зал оснащен всем необходимым современным оборудованием для всех  спортсменов.</p><span>В зале расположены отдельная зона для Crossfit и кардио-зона с 40 тренажерами. Также в фитнес центре есть несколько оборудованных залов для различных видов групповых занятий.</span>
+            </div>
+            <div class="intro__column intro__column--image">
+              <picture>
+                <source type="image/webp" media="(max-width: 767px)" srcset="img/content/intro/panorama_mobile.webp, img/content/intro/panorama_mobile@2x.webp 2x">
+                <source media="(max-width: 767px)" srcset="img/content/intro/panorama_mobile.jpg, img/content/intro/panorama_mobile@2x.jpg 2x">
+                <source type="image/webp" media="(max-width: 1200px)" srcset="img/content/intro/panorama_tablet.webp, img/content/intro/panorama_tablet@2x.webp 2x">
+                <source media="(max-width: 1200px)" srcset="img/content/intro/panorama_tablet.jpg, img/content/intro/panorama_tablet@2x.jpg 2x">
+                <source type="image/webp" srcset="img/content/intro/panorama_desktop.webp, img/content/intro/panorama_desktop@2x.webp 2x"><img src="img/content/intro/panorama_desktop.jpg" srcset="img/content/intro/panorama_desktop@2x.jpg 2x" width="660" height="401" alt="Фото спортзала." loading="lazy">
+              </picture>
+            </div>
+            <div class="intro__video-wrapper">
+              <div class="intro__video-cover" data-cover4video>
+                <picture>
+                  <source type="image/webp" media="(max-width: 767px)" srcset="img/content/intro/cover4video_mobile.webp, img/content/intro/cover4video_mobile@2x.webp 2x">
+                  <source media="(max-width: 767px)" srcset="img/content/intro/cover4video_mobile.jpg, img/content/intro/cover4video_mobile@2x.jpg 2x">
+                  <source type="image/webp" media="(max-width: 1200px)" srcset="img/content/intro/cover4video_tablet.webp, img/content/intro/cover4video_tablet@2x.webp 2x">
+                  <source media="(max-width: 1200px)" srcset="img/content/intro/cover4video_tablet.jpg, img/content/intro/cover4video_tablet@2x.jpg 2x">
+                  <source type="image/webp" srcset="img/content/intro/cover4video_desktop.webp, img/content/intro/cover4video_desktop@2x.webp 2x"><img src="img/content/intro/cover4video_desktop.jpg" srcset="img/content/intro/cover4video_desktop@2x.jpg 2x" width="364" height="228" alt="Фото спортзала." loading="lazy">
+                </picture>
+              </div>
+              <button data-play-video-button></button>
+              <div class="intro__video-container">
+                <div id="player" data-video-player data-video-src="9TZXsZItgdw"></div>
+              </div>
+            </div>
           </div>
+        </section>
+        <div class="sections-wrapper">
+          <section class="request">
+            <div class="container request__container" data-form-validate data-callback="base">
+              <h2>Бесплатное занятие</h2>
+              <form class="request__form" method="post" action="https://echo.htmlacademy.ru/">
+                <div class="custom-input" data-required data-on-input-validate data-validate-type="text" data-message-base="Укажите имя" title="Укажите имя">
+                  <label>
+                    <input type="text" id="name" name="name" placeholder="Имя">
+                  </label>
+                </div>
+                <div class="custom-input" data-required data-on-input-validate data-validate-type="phone" data-message-base="Укажите номер телефона" title="Укажите номер телефона">
+                  <label>
+                    <input type="tel" id="phone-number" name="phone-number" placeholder="Телефон">
+                  </label>
+                </div>
+                <button class="btn request__btn" type="submit">отправить</button>
+              </form>
+            </div>
+          </section>
+          <section class="contacts">
+            <div class="container contacts__container">
+              <h2>Контакты</h2>
+              <div class="contacts__columns">
+                <div class="contacts__column-left">
+                  <dl>
+                    <dt>Адрес:</dt>
+                    <dd><a href="https://yandex.ru/maps/-/CCUkjSwzXD" target="_blank">г. Омск, ул. 60 лет Октября, 7</a></dd>
+                    <dt>График работы:</dt>
+                    <dd>Пн-Вс: с 8:00 до 22:00</dd>
+                  </dl>
+                </div>
+                <div class="contacts__column-right">
+                  <dl>
+                    <dt>Телефон:</dt>
+                    <dd><a href="tel:+78005555555">8-800-555-55-55</a></dd>
+                    <dt>Email:</dt>
+                    <dd><a href="mailto:omsk@supergym.ru">omsk@supergym.ru</a></dd>
+                  </dl>
+                </div>
+              </div>
+            </div>
+          </section>
         </div>
       </main>
       <footer class="footer">
@@ -92,6 +164,7 @@
         </div>
       </footer>
     </div>
+    <script src="https://www.youtube.com/iframe_api"></script>
     <script src="js/vendor.min.js"></script>
     <script src="js/main.min.js"></script>
   </body>
