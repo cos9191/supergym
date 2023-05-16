@@ -224,6 +224,14 @@
 
     span {
       font-size: 58px;
+
+      @include m.vp-1200 {
+        font-size: 40px;
+      }
+
+      @include m.vp-767 {
+        font-size: 34px;
+      }
     }
   }
 
@@ -238,6 +246,7 @@
     line-height: 110.4px;
     font-weight: 600;
     letter-spacing: 0.05em;
+    -webkit-text-stroke: 2px v.$color-default-white;
 
     @include m.vp-1200 {
       font-size: 72px;

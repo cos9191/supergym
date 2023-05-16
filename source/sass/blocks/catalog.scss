@@ -1,0 +1,62 @@
+@use "../variables" as v;
+@use "../mixins" as m;
+
+.catalog {
+  position: relative;
+  z-index: 1;
+  background-color: v.$color-catalog-bg;
+
+  @include m.vp-1200 {
+    text-align: center;
+  }
+
+  h2 {
+    margin: 0;
+
+    font-weight: 600;
+    font-size: 54px;
+    line-height: 64.8px;
+    letter-spacing: 0.03em;
+
+    @include m.vp-1200 {
+      font-size: 42px;
+      line-height: 50.4px;
+    }
+
+    @include m.vp-767 {
+      font-size: 32px;
+      line-height: 38.4px;
+    }
+  }
+
+  &__container {
+    text-align: center;
+    padding-top: 120px;
+    padding-bottom: 120px;
+
+    @include m.vp-1349 {
+      padding: 120px 45px;
+    }
+
+
+    @include m.vp-1200 {
+      padding-top: 30px;
+      padding-bottom: 82px;
+    }
+
+    @include m.vp-767 {
+      padding: 70px 15px;
+    }
+  }
+
+  &__container > picture {
+    position: absolute;
+    z-index: 1;
+    right: 0;
+    bottom: -182px;
+
+    @include m.vp-767 {
+      display: none;
+    }
+  }
+}

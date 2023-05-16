@@ -11,13 +11,31 @@ $color-transparent:                 rgba(255, 255, 255, 0);
 // для нейминга цветов используем https://www.htmlcsscolor.com/hex/334482
 
 $color-neon-blue:                   #2c39f2;
-$color-torch-red:                   #ff1553;
 $color-tory-blue:                   #030a1a;
 $color-sapphire:                    #102654;
+$color-light-slate-grey:            #74819c;
+$color-dark-cerulean:               #003d85;
+$color-venetian-red:                #b80027;
+$color-torch-red:                   #ed0233;
+$color-crimson:                     #d10a42;
+$color-cobalt:                      #003eb7;
+$color-ghost-white:                 #f8f9fc;
+$color-chambray:                    #495a7d;
+$color-smalt:                       #00359f;
 
 $color-footer-bg:                   $color-tory-blue;
 $color-font-blue:                   $color-sapphire;
 $color-video-mask:                  rgba(20, 54, 122, 0.5);
+$color-video-button-gradient-1:     $color-dark-cerulean;
+$color-video-button-gradient-2:     $color-venetian-red;
+$color-video-button-gradient-3:     $color-torch-red;
+$color-video-button-gradient-4:     $color-cobalt;
+$color-catalog-bg:                  $color-ghost-white;
+$color-input-border:                $color-light-slate-grey;
+$color-contacts-border:             $color-light-slate-grey;
+$color-tabs-info:                   $color-chambray;
+$color-tabs-border-1:               $color-crimson;
+$color-tabs-border-2:               $color-smalt;
 
 // Gradient
 

@@ -4,13 +4,14 @@
 .sections-wrapper {
   display: grid;
   grid-template-columns: repeat(2, minmax(10px, 1fr));
+  border-top: 1px solid v.$color-contacts-border;
 
   @include m.vp-1200 {
     grid-template-columns: repeat(1, minmax(10px, 1fr));
+    border: none;
   }
 
   .container {
-    margin: 0 auto 0 0;
     padding-top: 56px;
     padding-bottom: 70px;
     max-width: 683px;
@@ -88,6 +89,7 @@
   background-color: v.$color-font-blue;
 
   &__container {
+    margin: 0 0 0 auto;
     max-width: 683px;
 
     @include m.vp-1200 {
@@ -129,10 +131,10 @@
 }
 
 .contacts {
-  color: v.$color-font-blue;
   background-color: v.$color-default-white;
 
   &__container {
+    margin: 0 auto 0 0;
     padding-left: 124px;
   }
 
@@ -150,7 +152,7 @@
 
   &__column-left {
     padding-right: 58px;
-    border-right: 1px solid #74819c;
+    border-right: 1px solid v.$color-contacts-border;
 
     @include m.vp-767 {
       padding-right: 0;
