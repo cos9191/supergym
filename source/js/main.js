@@ -24,7 +24,7 @@ window.addEventListener('DOMContentLoaded', () => {
   window.addEventListener('load', () => {
     // initPlayVideo();
     initTabs();
-    setTimeout(() => initPlayVideo(), 1500);
+    setTimeout(() => initPlayVideo(), 3000);
     initModals();
     const form = new Form();
     window.form = form;
