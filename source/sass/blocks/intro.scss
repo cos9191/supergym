@@ -33,7 +33,6 @@
 
     display: grid;
     grid-template-columns: minmax(10px, 355px) minmax(10px, 660px);
-    place-items: center;
     gap: 85px;
 
     padding-top: 120px;
@@ -50,6 +49,10 @@
     @include m.vp-767 {
       padding: 70px 0;
     }
+  }
+
+  &__container > * {
+    place-self: center;
   }
 
   &__column--text {

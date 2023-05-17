@@ -122,7 +122,6 @@
       "features city image"
       "features title image"
       "features button image";
-    align-items: flex-end;
     justify-content: center;
 
     padding-right: 120px;
@@ -150,6 +149,10 @@
         "features"
         "button";
     }
+  }
+
+  &__membership > * {
+    align-self: flex-end;
   }
 
   &__membership-img {

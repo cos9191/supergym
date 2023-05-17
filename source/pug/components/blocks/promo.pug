@@ -1,3 +1,26 @@
 mixin promo()
   section.promo
     .container.promo__container
+      .promo__text
+        .promo__text-row
+          h2
+            | SUPER
+            br
+            | GAMES
+          .promo__text-column
+            .promo__date
+              .promo__key Дата
+              .promo__value
+                span 7
+                p
+                  | Марта
+                  br
+                  | 2019
+            .promo__time
+              .promo__key Время
+              .promo__value
+                span 12:00
+        p Ежегодные соревнования по CrossFit
+        a.btn(href="#!") заполнить заявку
+      .promo__img
+        +picture-adaptive("content/promo", "crossfit", "jpg", 660, 500, "Cпортсмен готовится к соревнованиям.")

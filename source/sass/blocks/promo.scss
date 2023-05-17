@@ -1,207 +1,210 @@
 @use "../variables" as v;
 @use "../mixins" as m;
 
-.intro {
-  position: relative;
-  z-index: 0;
-
+.promo {
+  display: flex;
+  justify-content: center;
   background-color: v.$color-default-white;
 
-  @include m.vp-1200 {
-    text-align: center;
-  }
-
-  h2,
-  span,
-  p {
-    @include m.vp-1200 {
-      text-align: center;
-      margin-left: auto;
-      margin-right: auto;
-
-      max-width: 502px;
-    }
-  }
-
-  picture {
-    img {
-      @include m.vp-767 {
-        width: 100%;
-      }
-    }
-  }
-
   &__container {
-    position: relative;
-    z-index: 0;
-
     display: grid;
-    grid-template-columns: minmax(10px, 355px) minmax(10px, 660px);
-    place-items: center;
-    gap: 85px;
+    grid-template-columns: minmax(10px, 500px) minmax(10px, 660px);
+    grid-template-rows: 500px;
 
     padding-top: 120px;
-    padding-bottom: 120px;
+    padding-bottom: 50px;
+    width: unset;
+
+    color: v.$color-default-white;
+
+    @include m.vp-1349 {
+      padding: 120px 45px 50px;
+    }
 
     @include m.vp-1200 {
+      grid-template-columns: minmax(10px, 292px) minmax(10px, 386px);
+      grid-template-rows: 292px;
+
+      padding-top: 100px;
+    }
+
+    @include m.vp-767 {
       grid-template-columns: minmax(10px, 1fr);
-      gap: 50px;
 
-      padding-top: 30px;
-      padding-bottom: 82px;
+      padding: 70px 15px 50px;
     }
 
-    @include m.vp-767 {
-      padding: 70px 0;
+    @include m.vp-319 {
+      grid-template-rows: auto;
     }
   }
 
-  &__column--text {
-    span {
-      @include m.vp-1200 {
-        display: none;
-      }
-    }
+  &__container > * {
+    place-self: center;
   }
 
-  &__column--image {
-    @include m.vp-767 {
-      width: 100%;
-    }
-  }
+  h2 {
+    font-family: v.$ff-alumni;
+    font-weight: 600;
+    font-size: 82px;
+    line-height: 78.72px;
+    letter-spacing: 0.03em;
 
-  &__video-wrapper {
-    position: relative;
-    margin-top: -50%;
-    left: 120%;
-    width: 364px;
-    height: 228px;
+    margin: 0;
 
     @include m.vp-1200 {
-      margin-top: -22%;
-      left: unset;
-      width: 266px;
-      height: 167px;
+      font-size: 48px;
+      line-height: 46.08px;
+    }
+  }
+
+  &__text {
+    display: grid;
+    grid-template-columns: minmax(10px, 1fr);
+
+    padding: 85px 80px;
+    width: 100%;
+    height: 100%;
+
+    background-color: #ed0233;
+
+    @include m.vp-1200 {
+      padding: 50px 45px;
+    }
+
+    @include m.vp-319 {
+      padding: 15px;
+    }
+  }
+
+  &__text-row {
+    display: grid;
+    grid-template-columns: minmax(117px, min-content) minmax(10px, min-content);
+    gap: 50px;
+    place-self: center;
+
+    @include m.vp-1200 {
+      gap: 30px;
+    }
+
+    @include m.vp-319 {
+      gap: 10px;
+      grid-template-columns: minmax(10px, 1fr);
+    }
+  }
+
+  &__text-row > * {
+    place-self: center;
+  }
+
+  &__text-column {
+    display: grid;
+    grid-template-columns: min-content;
+  }
+
+  &__date {
+    display: flex;
+    flex-direction: column;
+  }
+
+  &__key {
+    font-size: 18px;
+    line-height: 27px;
+
+    @include m.vp-1200 {
+      font-size: 12px;
+      line-height: 18px;
+    }
+  }
+
+  &__value {
+    display: flex;
+    place-items: center;
+    gap: 7px;
+
+    border-top: 1px solid v.$color-default-white;
+  }
+
+  &__value > span {
+    font-weight: 700;
+    font-size: 40px;
+    line-height: 60px;
+
+    @include m.vp-1200 {
+      font-size: 24px;
+      line-height: 36px;
+    }
+  }
+
+  &__value > p {
+    font-size: 14px;
+    line-height: 21px;
+
+    margin: 0;
+
+    @include m.vp-1200 {
+      font-size: 10px;
+      line-height: 15px;
+    }
+  }
+
+  &__text > p {
+    font-size: 18px;
+    line-height: 27px;
+
+    margin: 30px 0 0;
+
+    @include m.vp-1200 {
+      font-size: 12px;
+      line-height: 18px;
+
+      margin-top: 15px;
     }
 
     @include m.vp-767 {
-      margin-top: unset;
+      text-align: center;
+    }
+  }
+
+  &__text > a {
+    align-items: center;
+    align-self: flex-end;
+
+    margin: 50px 0 0;
+    height: min-content;
+
+    @include m.vp-1200 {
+      margin-top: 36px;
+      padding: 16px 5px;
+
+      font-size: 10px;
+      line-height: 11.72px;
+
+      border-width: 2px;
+    }
+
+    @include m.vp-767 {
       width: 100%;
+    }
+
+    @include m.vp-319 {
+      margin-top: 15px;
+    }
+  }
+
+  &__img {
+    background-color: #003eb7;
+  }
+
+  &__img img {
+    height: 500px;
+
+    @include m.vp-1200 {
+      height: 292px;
+    }
+
+    @include m.vp-767 {
       height: auto;
     }
-
-    button {
-      position: absolute;
-      z-index: 1;
-      top: 50%;
-      left: 50%;
-      transform: translate(-50%, -50%);
-
-      width: 72px;
-      height: 72px;
-
-      background: linear-gradient(
-          44.89deg,
-          v.$color-video-button-gradient-1 25.38%,
-          v.$color-video-button-gradient-2 74.89%
-      );
-      border-radius: 50%;
-      border: none;
-
-      transition: transform v.$trans-default;
-    }
-
-    button::before {
-      content: "";
-      position: absolute;
-      transform: translate(-14px, -14px);
-
-      width: 100px;
-      height: 100px;
-
-      inset: 0;
-      background:
-        linear-gradient(
-            100deg,
-            v.$color-video-button-gradient-3,
-            v.$color-video-button-gradient-4
-        );
-      padding: 2px;
-      opacity: 0.2;
-      border-radius: 50%;
-      mask:
-        linear-gradient(#ffffff 0 0) content-box,
-        linear-gradient(#ffffff 0 0);
-      mask-composite: exclude;
-    }
-
-    button::after {
-      content: "";
-      position: absolute;
-      width: 0;
-      height: 0;
-
-      border-top: 8px solid transparent;
-      border-bottom: 8px solid transparent;
-      border-left: 15px solid #ffffff;
-
-      transform: translate(-50%, -50%);
-    }
-
-    button:hover {
-      transform: scale(1.1) translate(-50%, -50%);
-    }
-
-    .intro__video-container {
-      width: 364px;
-      height: 228px;
-
-      @include m.vp-1200 {
-        width: 266px;
-        height: 167px;
-      }
-
-      @include m.vp-767 {
-        width: 100%;
-        height: auto;
-        aspect-ratio: 1.91/1;
-      }
-    }
-  }
-
-  &__video-cover {
-    position: absolute;
-    z-index: 1;
-    width: 100%;
-    height: auto;
-  }
-
-  &__video-cover::after {
-    content: "";
-    position: absolute;
-    top: 0;
-    bottom: 0;
-    left: 0;
-    right: 0;
-
-    background: v.$color-video-mask;
-  }
-}
-
-[data-video-isShown="true"] {
-  z-index: -1;
-  opacity: 0;
-
-  //animation: hide 0.3s ease-in-out forwards;
-  animation: hide v.$trans-default;
-}
-
-@keyframes hide {
-  from {
-    opacity: 1;
-  }
-
-  to {
-    opacity: 0;
   }
 }
