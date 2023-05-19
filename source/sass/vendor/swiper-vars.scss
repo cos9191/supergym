@@ -1,0 +1,6 @@
+/* stylelint-disable */
+
+@use "../variables" as v;
+@use "../mixins" as m;
+
+$themeColor: v.$color-swiper-theme !default;

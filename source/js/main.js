@@ -5,6 +5,7 @@ import {Form} from './modules/form-validate/form';
 // import {uploadFile, uploadImageDrop} from './modules/input-file/init-upload';
 import {initPlayVideo} from './modules/play-video/play-video.js';
 import {initTabs} from './modules/tabs/init-tabs';
+import {initSwiper} from './modules/swiper/init-swiper.js';
 
 // ---------------------------------
 
@@ -23,8 +24,9 @@ window.addEventListener('DOMContentLoaded', () => {
   // в load следует добавить скрипты, не участвующие в работе первого экрана
   window.addEventListener('load', () => {
     // initPlayVideo();
-    initTabs();
     setTimeout(() => initPlayVideo(), 3000);
+    initTabs();
+    initSwiper();
     initModals();
     const form = new Form();
     window.form = form;
