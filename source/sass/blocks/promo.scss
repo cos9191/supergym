@@ -66,7 +66,7 @@
     width: 100%;
     height: 100%;
 
-    background-color: #ed0233;
+    background-color: v.$color-promo-text-bg;
 
     @include m.vp-1200 {
       padding: 50px 45px;
@@ -193,7 +193,7 @@
   }
 
   &__img {
-    background-color: #003eb7;
+    background-color: v.$color-promo-img-bg;
   }
 
   &__img img {

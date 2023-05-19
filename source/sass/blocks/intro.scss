@@ -20,6 +20,42 @@
     }
   }
 
+  h2 {
+    margin: 0;
+
+    font-family: v.$ff-alumni;
+    font-weight: 600;
+    font-size: 48px;
+    line-height: 57.6px;
+    letter-spacing: 0.03em;
+
+    @include m.vp-1200 {
+      font-size: 42px;
+      line-height: 50.4px;
+    }
+
+    @include m.vp-767 {
+      font-size: 32px;
+      line-height: 38.4px;
+    }
+  }
+
+  h3 {
+    margin: 20px 0 0;
+
+    @include m.vp-767 {
+      margin: 15px 0 0;
+    }
+  }
+
+  p {
+    margin: 50px 0 0;
+
+    @include m.vp-767 {
+      margin: 35px 0 0;
+    }
+  }
+
   picture {
     img {
       @include m.vp-767 {
