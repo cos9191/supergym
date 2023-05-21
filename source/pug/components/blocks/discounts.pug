@@ -1,0 +1,22 @@
+mixin discounts()
+  section.discounts
+    .container.discounts__container
+      h2 Акции
+      ul.discounts__list
+        li.discounts__item-special
+          .discounts__item-text
+            h3 Год
+              br
+              b 4999
+            p Безлимитный абонемент в тренажерный зал
+            a(href="#!") подробнее
+          .discounts__item-img
+            +picture-adaptive("content/discounts", "sportswoman", "jpg", 280, 462, "Регулярная посетительница SUPERGYM.")
+        li.discounts__item.discounts__item-text
+          h3 Месяц бесплатно
+          p Приведи друга, получи абонемент в подарок
+          a(href="#!") подробнее
+        li.discounts__item.discounts__item-text
+          h3 Скидка 20%
+          p Корпоративный фитнес с командой
+          a(href="#!") подробнее

@@ -1,0 +1,182 @@
+@use "../variables" as v;
+@use "../mixins" as m;
+
+.discounts {
+  &__container {
+    text-align: center;
+    padding-top: 100px;
+    padding-bottom: 60px;
+
+    @include m.vp-1200 {
+      padding-bottom: 50px;
+    }
+
+    @include m.vp-767 {
+      padding: 70px 15px;
+    }
+  }
+
+  h2 {
+    margin: 0;
+
+    font-weight: 600;
+    font-size: 54px;
+    line-height: 64.8px;
+    letter-spacing: 0.03em;
+
+    @include m.vp-1200 {
+      font-size: 42px;
+      line-height: 50.4px;
+    }
+
+    @include m.vp-767 {
+      font-size: 32px;
+      line-height: 38.4px;
+    }
+  }
+
+  &__list {
+    display: grid;
+    gap: 40px;
+    grid-template-columns: repeat(2, minmax(10px, 1fr));
+
+    list-style-type: none;
+    margin: 35px 0 0;
+    padding-left: 0;
+
+    @include m.vp-1200 {
+      width: 100%;
+      max-width: 678px;
+      margin: 35px auto 0;
+    }
+
+    @include m.vp-767 {
+      grid-template-columns: repeat(1, minmax(10px, 1fr));
+    }
+
+    h3,
+    p {
+      margin: 0;
+    }
+  }
+
+  &__item {
+    display: grid;
+    gap: 30px;
+    grid-template-columns: repeat(1, minmax(10px, max-content));
+
+    border: 7px solid transparent;
+    border-image-slice: 1;
+    border-image-source: linear-gradient(
+        135deg,
+        v.$color-tabs-border-1,
+        v.$color-tabs-border-2
+    );
+
+    @include m.vp-767 {
+      gap: 0;
+      grid-template-columns: repeat(1, minmax(10px, max-content));
+
+      margin: 0 auto;
+      width: 100%;
+    }
+  }
+
+  &__item-text {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    text-align: start;
+
+    padding: 35px;
+
+    @include m.vp-767 {
+      text-align: center;
+      align-items: center;
+      padding: 40px;
+    }
+
+    h3 {
+      font-size: 26px;
+      line-height: 150%;
+    }
+
+    p {
+      margin-top: 20px;
+      line-height: 140%;
+    }
+
+    a {
+      margin-top: auto;
+
+      font-weight: 700;
+      font-size: 12px;
+      line-height: 100%;
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+
+      border-bottom: 1px solid #1c3374;
+
+      @include m.vp-767 {
+        margin-top: 40px;
+      }
+    }
+  }
+
+  &__item-special {
+    grid-row: span 2;
+
+    display: grid;
+    grid-template-columns: repeat(2, minmax(10px, 1fr));
+    gap: 0;
+
+    color: v.$color-default-white;
+    background: #ed0233;
+
+    @include m.vp-1200 {
+      grid-row: unset;
+      grid-column: span 2;
+
+      grid-template-columns: minmax(10px, 279px)  minmax(10px, 399px);
+
+      height: 462px;
+    }
+
+    @include m.vp-767 {
+      grid-column: unset;
+      grid-template-columns: repeat(1, minmax(10px, 1fr));
+      height: unset;
+    }
+
+    h3 {
+      font-size: 28px;
+      line-height: 156%;
+    }
+
+    b {
+      font-size: 70px;
+      line-height: 156%;
+    }
+
+    p {
+      font-size: 18px;
+      line-height: 140%;
+    }
+
+    a {
+      font-size: 14px;
+      line-height: 100%;
+
+      border-bottom: 1px solid v.$color-default-white;
+    }
+  }
+
+  &__item-img {
+    background-color: v.$color-font-blue;
+
+    img {
+      height: 100%;
+      width: 100%;
+    }
+  }
+}

@@ -2,6 +2,7 @@
 import Swiper from '../../vendor/swiper-bundle';
 
 const staffSwiperNode = document.querySelector('.staff__swiper');
+const reviewsSwiperNode = document.querySelector('.reviews__swiper');
 
 export const initSwiper = () => {
   if (staffSwiperNode) {
@@ -25,6 +26,24 @@ export const initSwiper = () => {
           spaceBetween: 40,
         },
       },
+
+      // Navigation arrows
+      navigation: {
+        nextEl: '.swiper-button-next',
+        prevEl: '.swiper-button-prev',
+      },
+    }))();
+  }
+
+  if (reviewsSwiperNode) {
+    (() => new Swiper('.reviews__swiper', {
+
+      // Optional parameters
+      direction: 'horizontal',
+      loop: true,
+      autoHeight: true,
+      slidesPerView: 1,
+      spaceBetween: 2,
 
       // Navigation arrows
       navigation: {

@@ -1,0 +1,141 @@
+@use "../variables" as v;
+@use "../mixins" as m;
+
+.reviews {
+  &__container {
+    padding: 56px 103px 120px;
+
+    @include m.vp-1200 {
+      padding: 50px 101px 100px;
+    }
+
+    @include m.vp-767 {
+      padding: 20px 47px 70px;
+    }
+  }
+
+  h2,
+  h3,
+  p {
+    margin: 0;
+  }
+
+  h2 {
+    text-align: center;
+
+    font-family: v.$ff-alumni;
+    font-weight: 600;
+    font-size: 54px;
+    line-height: 64.8px;
+    letter-spacing: 0.03em;
+
+    @include m.vp-1200 {
+      font-size: 42px;
+      line-height: 50.4px;
+    }
+
+    @include m.vp-767 {
+      font-size: 32px;
+      line-height: 38.4px;
+    }
+  }
+
+  &__swiper-container {
+    position: relative;
+
+    margin: 0 auto;
+    max-width: 560px;
+
+    @include m.vp-1200 {
+      max-width: 566px;
+    }
+
+    @include m.vp-767 {
+      max-width: 100%;
+    }
+  }
+
+  &__swiper {
+    margin-top: 48px;
+    width: 560px;
+
+    color: v.$color-default-white;
+
+    @include m.vp-1200 {
+      width: 566px;
+    }
+
+    @include m.vp-767 {
+      max-width: 100%;
+    }
+  }
+
+  &__swiper-slide {
+    display: grid;
+    grid-template-columns: minmax(10px, 80px) minmax(10px, auto);
+    gap: 20px 30px;
+
+    padding: 62px;
+    background: v.$color-swiper-reviews-bg;
+
+    @include m.vp-767 {
+      grid-template-columns: repeat(2, minmax(10px, 1fr));
+
+      padding: 40px 25px;
+    }
+
+    h3 {
+      align-self: flex-end;
+
+      font-size: 20px;
+      line-height: 150%;
+
+      @include m.vp-767 {
+        justify-self: flex-start;
+        align-self: center;
+        line-height: 130%;
+      }
+    }
+
+    p {
+      font-size: 16px;
+      line-height: 140%;
+
+      @include m.vp-767 {
+        grid-column: span 2;
+      }
+    }
+  }
+
+  &__swiper-img {
+    position: relative;
+    grid-row: span 2;
+    align-self: center;
+
+    width: 80px;
+    height: 80px;
+
+    background-color: v.$color-default-white;
+    border-radius: 50%;
+
+    @include m.vp-767 {
+      grid-row: unset;
+      justify-self: flex-end;
+      align-self: center;
+
+      width: 68px;
+      height: 68px;
+    }
+
+    img {
+      border-radius: 50%;
+      text-indent: -100vw;
+
+      max-width: unset;
+      width: calc(100% + 2px);
+      height: calc(100% + 2px);
+
+      transform: translate(-1px, -1px);
+    }
+  }
+}
