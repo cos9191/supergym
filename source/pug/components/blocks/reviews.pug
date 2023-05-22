@@ -4,7 +4,7 @@ mixin reviews()
       h2 Отзывы
       // Обёртка для переноса кнопок за пределы свайпера
       .reviews__swiper-container
-        .swiper-button-prev
+        .swiper-button-prev.reviews__swiper-button-prev
         .swiper.reviews__swiper
           .swiper-wrapper.reviews__swiper-wrapper
             .swiper-slide.reviews__swiper-slide(tabindex="0")
@@ -17,4 +17,4 @@ mixin reviews()
                 +picture("content/reviews", "ivanp", "jpg", 80, 80, "Алексей Лавров, аватарка.")
               h3 Иван Петров
               p «Отличный тренажерный зал в&nbsp;Омске! Я&nbsp;посещаю Supergym уже несколько месяцев и&nbsp;полностью доволен своим выбором. Персонал очень дружелюбный и&nbsp;готов помочь в&nbsp;любое время. Раздевалки чистые и&nbsp;комфортные, есть все необходимое, включая фены и&nbsp;кулеры. Тренерский состав высококвалифицированный, их&nbsp;опыт и&nbsp;профессионализм помогают достигать поставленных целей быстрее. Я&nbsp;также оценил разнообразие групповых занятий и&nbsp;отличную кардио-зону. Бонусом является собственная парковка, где всегда есть место для машины. Я&nbsp;очень рекомендую Supergym всем, кто хочет заниматься спортом в&nbsp;комфортной и&nbsp;современной обстановке!»
-        .swiper-button-next
+        .swiper-button-next.reviews__swiper-button-next

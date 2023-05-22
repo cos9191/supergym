@@ -29,8 +29,8 @@ export const initSwiper = () => {
 
       // Navigation arrows
       navigation: {
-        nextEl: '.swiper-button-next',
-        prevEl: '.swiper-button-prev',
+        nextEl: '.staff__swiper-button-next',
+        prevEl: '.staff__swiper-button-prev',
       },
     });
   }
@@ -40,15 +40,15 @@ export const initSwiper = () => {
 
       // Optional parameters
       direction: 'horizontal',
-      loop: true,
+      loop: false,
       autoHeight: true,
       slidesPerView: 1,
       spaceBetween: 2,
 
       // Navigation arrows
       navigation: {
-        nextEl: '.swiper-button-next',
-        prevEl: '.swiper-button-prev',
+        nextEl: '.reviews__swiper-button-next',
+        prevEl: '.reviews__swiper-button-prev',
       },
     });
   }
