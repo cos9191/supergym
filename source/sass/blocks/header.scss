@@ -117,15 +117,16 @@
 
   &__membership {
     display: grid;
-    grid-template-columns: minmax(10px, 150px) minmax(10px, auto) minmax(10px, 556px);
+    column-gap: 64px;
+    grid-template-columns: minmax(10px, auto) minmax(10px, auto) minmax(10px, 500px);
     grid-template-areas:
       "features city image"
       "features title image"
       "features button image";
     justify-content: center;
 
-    padding-right: 120px;
-    margin-top: -21px;
+    //margin: -21px auto 0 62px;
+    margin: -21px auto 0 0;
 
     @include m.vp-1349 {
       margin-top: 0;
@@ -157,7 +158,6 @@
 
   &__membership-img {
     grid-area: image;
-    margin-left: 64px;
 
     @include m.vp-1200 {
       margin-left: 30px;
@@ -185,8 +185,8 @@
     list-style-type: none;
     text-align: end;
 
-    margin: 0;
-    padding: 110px 0 10px;
+    margin: 0 -59px 0 0;
+    padding: 124px 10px 10px 20px;
 
     font-size: 14px;
     line-height: 21px;
@@ -205,6 +205,7 @@
     grid-area: city;
 
     text-align: end;
+    padding-top: 90px;
     padding-right: 50px;
 
     font-family: v.$ff-alumni;
@@ -224,24 +225,14 @@
       font-size: 28px;
       line-height: 33.6px;
     }
-
-    span {
-      font-size: 58px;
-
-      @include m.vp-1200 {
-        font-size: 40px;
-      }
-
-      @include m.vp-767 {
-        font-size: 34px;
-      }
-    }
   }
 
   &__membership-title {
     grid-area: title;
 
     margin: 0;
+    padding-top: 0;
+    padding-bottom: 31px;
     text-align: end;
     text-transform: uppercase;
 
@@ -262,25 +253,27 @@
     grid-area: button;
     justify-self: flex-end;
 
-    padding-bottom: 50px;
-    min-width: 228px;
+    padding-bottom: 44px;
+    min-width: 233px;
 
     @include m.vp-1200 {
       padding-bottom: 25px;
+      min-width: 181px;
     }
 
     @include m.vp-767 {
       padding-bottom: 0;
       width: 100%;
+      min-width: unset;
     }
 
     a {
       display: inline-block;
 
-      padding: 22px;
+      padding: 20px;
       width: 100%;
       text-align: center;
-      //min-width: 228px;
+      text-transform: uppercase;
 
       font-weight: 700;
       font-size: 12px;
@@ -293,14 +286,6 @@
 
       @include m.hover-focus {
         opacity: 0.6;
-      }
-
-      @include m.vp-1200 {
-        min-width: 181px;
-      }
-
-      @include m.vp-767 {
-        width: 100%;
       }
     }
   }
