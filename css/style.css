@@ -2296,6 +2296,7 @@ swiper-container:not(.swiper-watch-progress) .swiper-lazy-preloader,
   grid-area: title;
   margin: 0;
   text-align: end;
+  text-transform: uppercase;
   font-family: "Alumni Sans", "Arial", sans-serif;
   font-size: 92px;
   line-height: 110.4px;
@@ -2310,11 +2311,14 @@ swiper-container:not(.swiper-watch-progress) .swiper-lazy-preloader,
   grid-area: button;
   justify-self: flex-end;
   padding-bottom: 50px;
+  min-width: 228px;
 }
 
 .header__membership-btn a {
+  display: inline-block;
   padding: 22px;
-  min-width: 228px;
+  width: 100%;
+  text-align: center;
   font-weight: 700;
   font-size: 12px;
   line-height: 14px;
