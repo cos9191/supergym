@@ -11,6 +11,6 @@ mixin intro()
         .intro__video-wrapper
           .intro__video-cover(data-cover4video data-video-isShown=false)
             +picture-adaptive("content/intro", "cover4video", "jpg", 364, 228, "Фото спортзала.")
-          button(data-play-video-button data-video-isShown=false)
+          button(aria-label="Play Video" data-play-video-button data-video-isShown=false)
           .intro__video-container
             div#player(data-video-player data-video-src="9TZXsZItgdw")
