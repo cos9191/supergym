@@ -40,7 +40,7 @@ export const initSwiper = () => {
 
       // Optional parameters
       direction: 'horizontal',
-      loop: true,
+      loop: false,
       autoHeight: true,
       slidesPerView: 1,
       spaceBetween: 2,

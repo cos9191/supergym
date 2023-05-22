@@ -1,5 +1,5 @@
 mixin staff()
-  section.staff
+  section.staff(id="staff")
     .container.staff__container
       h2 Тренеры
       // Обёртка для переноса кнопок за пределы свайпера
@@ -53,15 +53,15 @@ mixin staff()
                     li Опыт&nbsp;&mdash; 5&nbsp;лет
             .swiper-slide.staff__swiper-slide(tabindex="0")
               .swiper-slide__img
-                +picture-adaptive("content/staff", "aleksandrap", "jpg", 260, 294, "Александра Петрова.")
+                +picture-adaptive("content/staff", "mariav", "jpg", 260, 294, "Мария Волкова.")
               .swiper-slide__content
-                h3 Александра Петрова
+                h3 Мария Волкова
                 .swiper-slide__content-hidden
-                  p Силовые тренировки
+                  p Функциональный тренинг
                   ul
-                    li Certified Level&nbsp;3 Trainer
-                    li Победитель национального Чемпионата по&nbsp;пауэрлифтингу
-                    li Опыт&nbsp;&mdash; 8&nbsp;лет
+                    li Certified Level&nbsp; 3 Trainer
+                    li Участие в&nbsp;соревнованиях CrossFit Games
+                    li Опыт&nbsp;&mdash; 7&nbsp;лет
             .swiper-slide.staff__swiper-slide(tabindex="0")
               .swiper-slide__img
                 +picture-adaptive("content/staff", "sergeyi", "jpg", 260, 294, "Сергей Иванов.")
@@ -86,13 +86,13 @@ mixin staff()
                     li Опыт&nbsp;&mdash; 7&nbsp;лет
             .swiper-slide.staff__swiper-slide(tabindex="0")
               .swiper-slide__img
-                +picture-adaptive("content/staff", "mariav", "jpg", 260, 294, "Мария Волкова.")
+                +picture-adaptive("content/staff", "aleksandrap", "jpg", 260, 294, "Александра Петрова.")
               .swiper-slide__content
-                h3 Мария Волкова
+                h3 Александра Петрова
                 .swiper-slide__content-hidden
-                  p Функциональный тренинг
+                  p Силовые тренировки
                   ul
-                    li Certified Level&nbsp; 3 Trainer
-                    li Участие в&nbsp;соревнованиях CrossFit Games
-                    li Опыт&nbsp;&mdash; 7&nbsp;лет
+                    li Certified Level&nbsp;3 Trainer
+                    li Победитель национального Чемпионата по&nbsp;пауэрлифтингу
+                    li Опыт&nbsp;&mdash; 8&nbsp;лет
         .swiper-button-next

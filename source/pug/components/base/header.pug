@@ -3,7 +3,7 @@ mixin header(headerMods, currentUrl)
   header.header(class=headerMods)
     .container.header__container
       .header__top
-        a.header__logo(href="index.html", aria-label="Переход на главную") Supergym
+        a.header__logo(href="index.html", aria-label="Переход на главную страницу.") Supergym
         a.header__phone(href="tel:+78005555555") 8-800-555-55-55
       .header__membership
         ul.header__membership-feature-list
@@ -17,6 +17,6 @@ mixin header(headerMods, currentUrl)
             br
             | центр
         .header__membership-btn
-          button Купить абонемент
+          a(href="./index.html#catalog") Купить абонемент
         .header__membership-img
           +picture("content/header", "membership", "jpg", 500, 556, "Привлекательный спортсмен.")
