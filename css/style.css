@@ -619,6 +619,10 @@ button,
   cursor: pointer;
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
 .wrapper {
   position: relative;
   display: -webkit-box;
@@ -2308,7 +2312,7 @@ swiper-container:not(.swiper-watch-progress) .swiper-lazy-preloader,
   padding-bottom: 50px;
 }
 
-.header__membership-btn button {
+.header__membership-btn a {
   padding: 22px;
   min-width: 228px;
   font-weight: 700;
@@ -2321,7 +2325,7 @@ swiper-container:not(.swiper-watch-progress) .swiper-lazy-preloader,
   transition: opacity 0.3s ease;
 }
 
-.header__membership-btn button.focus-visible:focus {
+.header__membership-btn a.focus-visible:focus {
   opacity: 0.6;
 }
 
@@ -3568,6 +3572,44 @@ swiper-container:not(.swiper-watch-progress) .swiper-lazy-preloader,
   opacity: 0.6;
 }
 
+.wip__container {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: minmax(10px, 1fr);
+  grid-template-columns: minmax(10px, 1fr);
+  justify-items: center;
+  padding: 0 103px 50px;
+  min-height: 400px;
+}
+
+.wip__text {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
+  flex-direction: column;
+}
+
+.wip h2 {
+  text-align: center;
+  margin-bottom: 0;
+}
+
+.wip__container > picture {
+  position: absolute;
+  z-index: -1;
+  right: 0;
+  bottom: 50px;
+}
+
 /* @mixin hover-focus {
     @media (hover: hover) {
       &:hover:not(.focus-visible) {
@@ -3709,7 +3751,7 @@ swiper-container:not(.swiper-watch-progress) .swiper-lazy-preloader,
     padding-bottom: 25px;
   }
 
-  .header__membership-btn button {
+  .header__membership-btn a {
     min-width: 181px;
   }
 
@@ -4105,7 +4147,7 @@ swiper-container:not(.swiper-watch-progress) .swiper-lazy-preloader,
     width: 100%;
   }
 
-  .header__membership-btn button {
+  .header__membership-btn a {
     width: 100%;
   }
 
@@ -4610,7 +4652,7 @@ swiper-container:not(.swiper-watch-progress) .swiper-lazy-preloader,
     opacity: 0.6;
   }
 
-  .header__membership-btn button:hover:not(.focus-visible) {
+  .header__membership-btn a:hover:not(.focus-visible) {
     opacity: 0.6;
   }
 
