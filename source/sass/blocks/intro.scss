@@ -8,6 +8,10 @@
     text-align: center;
   }
 
+  @include m.vp-767 {
+    text-align: start;
+  }
+
   h2,
   span,
   p {
@@ -16,43 +20,70 @@
       margin-left: auto;
       margin-right: auto;
 
-      max-width: 502px;
+      max-width: 530px;
+    }
+
+    @include m.vp-767 {
+      text-align: start;
     }
   }
 
+  span,
+  p {
+    font-weight: 300;
+  }
+
   h2 {
-    margin: 0;
+    margin: 39px 0 0;
 
     font-family: v.$ff-alumni;
     font-weight: 600;
     font-size: 48px;
     line-height: 57.6px;
-    letter-spacing: 0.03em;
+    letter-spacing: 0.02em;
 
     @include m.vp-1200 {
+      margin: 0 auto;
+      padding-right: 16px;
+
       font-size: 42px;
       line-height: 50.4px;
     }
 
     @include m.vp-767 {
+      margin: 0;
+      padding-right: 0;
+
       font-size: 32px;
       line-height: 38.4px;
     }
   }
 
   h3 {
-    margin: 20px 0 0;
+    margin: 8px 0 0;
+
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 150%;
+
+    @include m.vp-1200 {
+      margin: 0;
+    }
 
     @include m.vp-767 {
-      margin: 15px 0 0;
+      margin: 6px 0 0;
     }
   }
 
   p {
-    margin: 50px 0 0;
+    margin: 37px auto 10px;
+
+    @include m.vp-1200 {
+      margin: 33px auto 0;
+    }
 
     @include m.vp-767 {
-      margin: 35px 0 0;
+      margin: 23px 0 0;
     }
   }
 
@@ -68,6 +99,7 @@
     position: relative;
 
     display: grid;
+    justify-content: flex-end;
     grid-template-columns: minmax(10px, 355px) minmax(10px, 660px);
     gap: 85px;
 
@@ -76,22 +108,32 @@
 
     @include m.vp-1200 {
       grid-template-columns: minmax(10px, 1fr);
-      gap: 50px;
+      gap: 43px;
 
-      padding-top: 30px;
-      padding-bottom: 82px;
+      padding-top: 100px;
+      padding-bottom: 100px;
     }
 
     @include m.vp-767 {
-      padding: 70px 0;
+      gap: 34px;
+      padding: 63px 0 70px;
     }
   }
 
-  &__container > * {
-    place-self: center;
-  }
-
   &__column--text {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+
+    @include m.vp-1200 {
+      justify-content: flex-start;
+    }
+
+    @include m.vp-767 {
+      align-content: flex-start;
+      padding: 0 15px 0;
+    }
+
     span {
       @include m.vp-1200 {
         display: none;
@@ -103,28 +145,34 @@
     @include m.vp-767 {
       width: 100%;
     }
+
+    img {
+      width: 100%;
+    }
   }
 
   &__video-wrapper {
     position: relative;
-    margin-top: -50%;
-    left: 120%;
+    margin-top: -56%;
+    left: 106%;
     width: 364px;
     height: 228px;
 
     @include m.vp-1200 {
-      margin-top: -22%;
-      left: unset;
+      margin-top: -127px;
+      left: 206px;
       width: 266px;
       height: 167px;
     }
 
     @include m.vp-767 {
-      margin-top: unset;
+      margin-top: 6px;
+      left: 0;
       width: 100%;
       height: auto;
     }
 
+    // inner circle
     button {
       position: absolute;
       z-index: 1;
@@ -144,8 +192,19 @@
       border: none;
 
       transition: transform v.$trans-default;
+
+      @include m.vp-1200 {
+        width: 52px;
+        height: 52px;
+      }
+
+      @include m.vp-767 {
+        top: 47.5%;
+        left: 50.5%;
+      }
     }
 
+    // outer ring
     button::before {
       content: "";
       position: absolute;
@@ -168,8 +227,15 @@
         linear-gradient(#ffffff 0 0) content-box,
         linear-gradient(#ffffff 0 0);
       mask-composite: exclude;
+
+      @include m.vp-1200 {
+        width: 73px;
+        height: 73px;
+        transform: translate(-11px, -11px);
+      }
     }
 
+    // white triangle
     button::after {
       content: "";
       position: absolute;
@@ -181,6 +247,12 @@
       border-left: 15px solid #ffffff;
 
       transform: translate(-50%, -50%);
+
+      @include m.vp-1200 {
+        border-top: 6px solid transparent;
+        border-bottom: 6px solid transparent;
+        border-left: 10px solid #ffffff;
+      }
     }
 
     button:hover {
@@ -227,7 +299,6 @@
   z-index: -1;
   opacity: 0;
 
-  //animation: hide 0.3s ease-in-out forwards;
   animation: hide v.$trans-default;
 }
 
