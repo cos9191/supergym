@@ -61,7 +61,11 @@
             <div class="header__membership-btn"><a href="./index.html#catalog">Купить абонемент</a></div>
             <div class="header__membership-img">
               <picture>
-                <source type="image/webp" srcset="img/content/header/membership.webp, img/content/header/membership@2x.webp 2x"><img src="img/content/header/membership.jpg" srcset="img/content/header/membership@2x.jpg 2x" width="500" height="556" alt="Привлекательный спортсмен." loading="lazy">
+                <source type="image/webp" media="(max-width: 767px)" srcset="img/content/header/membership_mobile.webp, img/content/header/membership_mobile@2x.webp 2x">
+                <source media="(max-width: 767px)" srcset="img/content/header/membership_mobile.jpg, img/content/header/membership_mobile@2x.jpg 2x">
+                <source type="image/webp" media="(max-width: 1200px)" srcset="img/content/header/membership_tablet.webp, img/content/header/membership_tablet@2x.webp 2x">
+                <source media="(max-width: 1200px)" srcset="img/content/header/membership_tablet.jpg, img/content/header/membership_tablet@2x.jpg 2x">
+                <source type="image/webp" srcset="img/content/header/membership_desktop.webp, img/content/header/membership_desktop@2x.webp 2x"><img src="img/content/header/membership_desktop.jpg" srcset="img/content/header/membership_desktop@2x.jpg 2x" width="500" height="556" alt="Привлекательный спортсмен." loading="lazy">
               </picture>
             </div>
           </div>
