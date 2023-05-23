@@ -17,6 +17,10 @@
   &__container {
     padding: 56px 103px 140px;
 
+    @include m.vp-1349 {
+      padding: 56px 45px 140px;
+    }
+
     @include m.vp-1200 {
       padding: 50px 101px 100px;
     }
@@ -129,10 +133,11 @@
   }
 
   .swiper-slide__img img {
+    min-width: 100%;
+
     @include m.vp-767 {
       width: 100%;
       max-width: unset;
-      min-width: 100%;
       height: 100%;
     }
   }

@@ -56,25 +56,6 @@
     }
   }
 
-  dt:not(:first-child) {
-    margin-top: 30px;
-  }
-
-  dt {
-    font-weight: 700;
-
-    @include m.vp-1200 {
-      font-size: 20px;
-      line-height: 30px;
-    }
-  }
-
-  dd {
-    font-size: 14px;
-    line-height: 21.33px;
-    margin-top: 10px;
-  }
-
   a {
     transition: opacity v.$trans-default;
 
@@ -138,15 +119,60 @@
     padding-left: 124px;
   }
 
-  &__columns {
+  &__list {
     display: grid;
     grid-template-columns: repeat(2, minmax(10px, 1fr));
 
-    margin-top: 40px;
+    margin: 40px 0 0;
+    padding-left: 0;
+
+    list-style-type: none;
 
     @include m.vp-767 {
       grid-template-columns: repeat(1, minmax(10px, 1fr));
       gap: 30px;
+    }
+
+    h3 {
+      margin: 0;
+      font-weight: 700;
+
+      @include m.vp-1200 {
+        font-size: 20px;
+        line-height: 30px;
+      }
+    }
+
+    p {
+      margin: 10px 0 0;
+      font-size: 14px;
+      line-height: 21.33px;
+    }
+
+    li:nth-child(odd) {
+      padding-right: 58px;
+      border-right: 1px solid v.$color-contacts-border;
+
+      @include m.vp-767 {
+        padding-right: unset;
+        border-right: unset;
+      }
+    }
+
+    li:nth-child(even) {
+      padding-left: 58px;
+
+      @include m.vp-767 {
+        padding-left: unset;
+      }
+    }
+
+    li:nth-child(n+3) {
+      padding-top: 30px;
+
+      @include m.vp-767 {
+        padding-top: unset;
+      }
     }
   }
 
