@@ -26,6 +26,8 @@
   }
 
   &__logo {
+    width: fit-content;
+
     text-transform: uppercase;
     font-family: v.$ff-alumni;
     font-weight: 600;
@@ -112,6 +114,7 @@
     }
 
     a {
+      display: inline-block;
       padding: 5px;
       transition: opacity v.$trans-default;
 
