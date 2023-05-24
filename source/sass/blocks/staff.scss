@@ -15,7 +15,7 @@
   color: v.$color-font-blue;
 
   &__container {
-    padding: 56px 103px 140px;
+    padding: 58px 103px 140px;
 
     @include m.vp-1349 {
       padding: 56px 45px 140px;
@@ -114,6 +114,7 @@
     .swiper-slide__content {
       align-items: flex-start;
       grid-template-rows: min-content;
+      padding-top: 52px;
     }
 
     .swiper-slide__content-hidden {
@@ -160,7 +161,7 @@
     display: grid;
     align-items: flex-end;
 
-    padding: 30px;
+    padding: 22px;
     height: 100%;
 
     overflow: auto;
@@ -184,14 +185,14 @@
     margin: 0;
 
     font-size: 16px;
-    line-height: 24px;
+    line-height: 15px;
 
     color: v.$color-font-staff-focus;
   }
 
   ul {
-    margin: 40px 0 0;
-    padding-left: 40px;
+    margin: 38px 0 0;
+    padding-left: 49px;
     overflow: auto;
   }
 
@@ -199,6 +200,10 @@
     text-align: start;
     font-size: 14px;
     line-height: 21px;
+  }
+
+  li:not(:last-child) {
+    margin-bottom: 13px;
   }
 
   .swiper-slide__content-hidden {

@@ -13,7 +13,6 @@ export const initSwiper = () => {
       direction: 'horizontal',
       loop: true,
       slidesPerView: 1,
-      spaceBetween: 2,
 
       breakpoints: {
         // when window width is >= 768px
@@ -23,6 +22,10 @@ export const initSwiper = () => {
         },
         // when window width is >= 1200px
         1200: {
+          slidesPerView: 4,
+          spaceBetween: 20,
+        },
+        1300: {
           slidesPerView: 4,
           spaceBetween: 40,
         },

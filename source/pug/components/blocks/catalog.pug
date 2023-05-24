@@ -1,7 +1,7 @@
 mixin catalog()
   section.catalog(id="catalog")
     .container.catalog__container.tabs(data-tabs="parent")
-      +picture("content/catalog", "weights", "png", 321, 384, "Блины для штанги.")
+      +picture-adaptive("content/catalog", "weights", "png", 321, 384, "Блины для штанги.").catalog__bg
       h2 Абонементы
       .tabs__controls(data-tabs="controls")
         button.tabs__control.btn(data-tabs="control" data-index="0") 1 месяц
@@ -15,21 +15,21 @@ mixin catalog()
               p 12 занятий
               span(data-price-shadow="5000")
                 | 5000&nbsp;
-                span ₽
+                mark ₽
               a(href="./catalog.html") купить абонемент
             li
               h3 Дневной
               p с 8:00 до 17:00
               span(data-price-shadow="1700")
                 | 1700&nbsp;
-                span ₽
+                mark ₽
               a(href="./catalog.html") купить абонемент
             li
               h3 Полный день
               p с 8:00 до 22:00
               span(data-price-shadow="2700")
                 | 2700&nbsp;
-                span ₽
+                mark ₽
               a(href="./catalog.html") купить абонемент
         .tabs__element(data-tabs="element")
           ol
