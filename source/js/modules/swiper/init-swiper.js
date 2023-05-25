@@ -23,9 +23,9 @@ export const initSwiper = () => {
         // when window width is >= 1200px
         1200: {
           slidesPerView: 4,
-          spaceBetween: 20,
+          spaceBetween: 30,
         },
-        1300: {
+        1350: {
           slidesPerView: 4,
           spaceBetween: 40,
         },

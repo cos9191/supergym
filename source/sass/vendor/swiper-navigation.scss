@@ -7,6 +7,10 @@
 @at-root {
   :root {
     --swiper-navigation-size: 32px;
+
+    @include m.vp-767 {
+      --swiper-navigation-size: 20px;
+    }
     /*
   --swiper-navigation-top-offset: 50%;
   --swiper-navigation-sides-offset: 10px;
@@ -69,11 +73,15 @@
   &:after {
     content: 'prev';
   }
-  left: var(--swiper-navigation-sides-offset, -45px);
+  left: var(--swiper-navigation-sides-offset, -56px);
   right: auto;
 
-  @include m.vp-1349 {
-    left: var(--swiper-navigation-sides-offset, -40px);
+  //@include m.vp-1349 {
+  //  left: var(--swiper-navigation-sides-offset, -40px);
+  //}
+  @include m.vp-767 {
+    transform: translateY(4px);
+    left: var(--swiper-navigation-sides-offset, -32px);
   }
 }
 
@@ -82,11 +90,15 @@
   &:after {
     content: 'next';
   }
-  right: var(--swiper-navigation-sides-offset, -45px);
+  right: var(--swiper-navigation-sides-offset, -56px);
   left: auto;
 
-  @include m.vp-1349 {
-    right: var(--swiper-navigation-sides-offset, -40px);
+  //@include m.vp-1349 {
+  //  right: var(--swiper-navigation-sides-offset, -40px);
+  //}
+  @include m.vp-767 {
+    transform: translateY(4px);
+    right: var(--swiper-navigation-sides-offset, -32px);
   }
 }
 

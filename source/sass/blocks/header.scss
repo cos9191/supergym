@@ -221,7 +221,7 @@
     }
 
     @include m.vp-767 {
-      margin-right: -10px;
+      margin-right: -9px;
       padding: 60px 0 0;
     }
 
@@ -254,7 +254,7 @@
 
     @include m.vp-767 {
       padding-top: 48px;
-      padding-right: 3px;
+      padding-right: 2px;
 
       font-size: 28px;
       line-height: 33.6px;
@@ -288,8 +288,11 @@
 
     @include m.vp-767 {
       margin-right: 0;
+      padding-right: 2px;
       padding-top: 13px;
       padding-bottom: 0;
+      -webkit-text-stroke: 4px v.$color-default-white;
+      letter-spacing: 0.05em;
     }
   }
 
@@ -336,8 +339,8 @@
       }
 
       @include m.vp-767 {
-        margin-left: -3px;
-        width: 101%;
+        margin-left: -5px;
+        width: 102%;
       }
     }
   }
