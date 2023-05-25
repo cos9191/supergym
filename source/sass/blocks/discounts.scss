@@ -75,6 +75,8 @@
     display: grid;
     grid-template-columns: repeat(1, minmax(10px, max-content));
 
+    min-height: 211px;
+
     border: 7px solid transparent;
     border-image-slice: 1;
     border-image-source: linear-gradient(
@@ -157,6 +159,7 @@
     @include m.vp-767 {
       grid-column: unset;
       grid-template-columns: repeat(1, minmax(10px, 1fr));
+
       height: unset;
     }
 
@@ -168,7 +171,7 @@
       }
 
       @include m.vp-767 {
-        align-items: flex-start;
+        align-items: center;
 
         padding-bottom: 45px;
       }
@@ -179,7 +182,8 @@
       line-height: 156%;
 
       @include m.vp-767 {
-        padding-left: 29px;
+        padding-left: 0;
+        margin-left: -25px;
       }
     }
 

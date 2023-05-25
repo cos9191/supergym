@@ -76,9 +76,14 @@
   left: var(--swiper-navigation-sides-offset, -56px);
   right: auto;
 
-  //@include m.vp-1349 {
-  //  left: var(--swiper-navigation-sides-offset, -40px);
-  //}
+  @include m.vp-1279 {
+    left: var(--swiper-navigation-sides-offset, -40px);
+  }
+
+  @include m.vp-1200 {
+    left: var(--swiper-navigation-sides-offset, -56px);
+  }
+
   @include m.vp-767 {
     transform: translateY(4px);
     left: var(--swiper-navigation-sides-offset, -32px);
@@ -93,9 +98,14 @@
   right: var(--swiper-navigation-sides-offset, -56px);
   left: auto;
 
-  //@include m.vp-1349 {
-  //  right: var(--swiper-navigation-sides-offset, -40px);
-  //}
+  @include m.vp-1279 {
+    right: var(--swiper-navigation-sides-offset, -40px);
+  }
+
+  @include m.vp-1200 {
+    right: var(--swiper-navigation-sides-offset, -56px);
+  }
+
   @include m.vp-767 {
     transform: translateY(4px);
     right: var(--swiper-navigation-sides-offset, -32px);
