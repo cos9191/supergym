@@ -23,8 +23,7 @@
     textarea {
       flex-grow: 1;
       max-width: 300px;
-      min-height: 48px;
-      padding: 10px 0;
+      padding: 5px 0;
 
       color: inherit;
       background-color: transparent;
@@ -51,6 +50,8 @@
     input::placeholder,
     textarea::placeholder {
       color: inherit;
+      font-size: 14px;
+      line-height: inherit;
     }
   }
 

@@ -160,9 +160,11 @@
 
   &__swiper-button-prev,
   &__swiper-button-next {
-    top: 42%;
-
     @include m.vp-1200 {
+      top: 42%;
+    }
+
+    @include m.vp-767 {
       top: 50%;
     }
   }

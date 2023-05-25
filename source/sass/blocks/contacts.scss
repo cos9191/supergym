@@ -13,11 +13,12 @@
 
   .container {
     padding-top: 56px;
-    padding-bottom: 70px;
+    padding-bottom: 63px;
     max-width: 683px;
 
     @include m.vp-1200 {
       margin: 0 auto;
+      padding-bottom: 70px;
     }
 
     @include m.vp-769 {
@@ -82,60 +83,112 @@
     }
   }
 
+  h2 {
+    transform: translate(0, 8px);
+    letter-spacing: 0.035em; // stylelint-disable-line
+
+    @include m.vp-1200 {
+      transform: translate(0, 4px);
+      letter-spacing: 0.03em;
+    }
+
+    @include m.vp-767 {
+      transform: translate(-1px, 7px);
+    }
+  }
+
   &__form {
     display: grid;
-    gap: 10px;
+    gap: 28px 27px;
     grid-template-columns: minmax(10px, 1fr) minmax(10px, 1fr);
 
+    margin-top: 34px;
     max-width: 410px;
 
     @include m.vp-1200 {
+      gap: 30px 58px;
       max-width: 472px;
     }
 
     @include m.vp-767 {
-      max-width: 100%;
       display: flex;
       flex-direction: column;
+
+      margin-top: 40px;
+      max-width: 100%;
     }
   }
 
   &__btn {
     grid-column: 1 / span 2;
 
+    padding: 16px;
     width: 100%;
-    padding: 21px;
 
     font-size: 14px;
     line-height: 16.41px;
+
+    @include m.vp-767 {
+      margin-top: 9px;
+    }
   }
 }
 
 .contacts {
   background-color: v.$color-default-white;
 
-  &__container {
+  .contacts__container {
     margin: 0 auto 0 0;
     padding-left: 124px;
+
+    @include m.vp-1200 {
+      padding-left: 133px;
+      padding-bottom: 62px;
+    }
+
+    @include m.vp-767 {
+      padding-left: 5%;
+      padding-bottom: 60px;
+    }
+  }
+
+  h2 {
+    margin-left: -4px;
+    letter-spacing: 0.02em;
+
+    @include m.vp-1200 {
+      margin-top: 5px;
+      margin-left: 0;
+    }
   }
 
   &__list {
     display: grid;
     grid-template-columns: repeat(2, minmax(10px, 1fr));
 
-    margin: 40px 0 0;
+    margin: 37px 0 0;
     padding-left: 0;
 
     list-style-type: none;
 
+    @include m.vp-1200 {
+      grid-template-columns: repeat(2, minmax(10px, auto));
+      margin-top: 32px;
+    }
+
     @include m.vp-767 {
       grid-template-columns: repeat(1, minmax(10px, 1fr));
-      gap: 30px;
+      gap: 18px;
+
+      margin-top: 36px;
     }
 
     h3 {
       margin: 0;
+
       font-weight: 700;
+      font-size: 16px;
+      line-height: 150%;
 
       @include m.vp-1200 {
         font-size: 20px;
@@ -144,31 +197,47 @@
     }
 
     p {
-      margin: 10px 0 0;
+      margin: 4px 0 0;
       font-size: 14px;
       line-height: 21.33px;
+
+      @include m.vp-1200 {
+        margin-top: 7px;
+        font-size: 18px;
+        line-height: 152%;
+      }
     }
 
     li:nth-child(odd) {
-      padding-right: 58px;
+      padding-right: 10px;
       border-right: 1px solid v.$color-contacts-border;
 
+      @include m.vp-1200 {
+        padding-right: 0;
+        margin-right: 12px;
+      }
+
       @include m.vp-767 {
-        padding-right: unset;
+        margin-right: unset;
         border-right: unset;
       }
     }
 
     li:nth-child(even) {
-      padding-left: 58px;
+      padding-left: 62px;
+
+      @include m.vp-1200 {
+        padding-left: 0;
+        margin-left: 36px;
+      }
 
       @include m.vp-767 {
-        padding-left: unset;
+        margin-left: unset;
       }
     }
 
     li:nth-child(n+3) {
-      padding-top: 30px;
+      padding-top: 17px;
 
       @include m.vp-767 {
         padding-top: unset;
