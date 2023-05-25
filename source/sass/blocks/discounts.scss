@@ -8,28 +8,34 @@
     padding-bottom: 60px;
 
     @include m.vp-1200 {
+      padding-top: 92px;
       padding-bottom: 50px;
     }
 
     @include m.vp-767 {
-      padding: 70px 15px;
+      padding: 63px 15px 75px;
     }
   }
 
   h2 {
     margin: 0;
 
+    font-family: v.$ff-alumni;
     font-weight: 600;
     font-size: 54px;
     line-height: 64.8px;
     letter-spacing: 0.03em;
 
     @include m.vp-1200 {
+      padding-right: 9px;
+
       font-size: 42px;
       line-height: 50.4px;
     }
 
     @include m.vp-767 {
+      padding-right: 5px;
+
       font-size: 32px;
       line-height: 38.4px;
     }
@@ -41,17 +47,22 @@
     grid-template-columns: repeat(2, minmax(10px, 1fr));
 
     list-style-type: none;
-    margin: 35px 0 0;
+    margin: 34px 0 0;
     padding-left: 0;
 
     @include m.vp-1200 {
-      width: 100%;
+      gap: 29px;
+
+      margin: 40px auto 0;
       max-width: 678px;
-      margin: 35px auto 0;
+      width: 100%;
     }
 
     @include m.vp-767 {
+      gap: 30px;
       grid-template-columns: repeat(1, minmax(10px, 1fr));
+
+      margin-top: 43px;
     }
 
     h3,
@@ -62,7 +73,6 @@
 
   &__item {
     display: grid;
-    gap: 30px;
     grid-template-columns: repeat(1, minmax(10px, max-content));
 
     border: 7px solid transparent;
@@ -74,7 +84,6 @@
     );
 
     @include m.vp-767 {
-      gap: 0;
       grid-template-columns: repeat(1, minmax(10px, max-content));
 
       margin: 0 auto;
@@ -88,12 +97,16 @@
     align-items: flex-start;
     text-align: start;
 
-    padding: 35px;
+    padding: 19px 21px 29px 28px;
+
+    @include m.vp-1200 {
+      min-height: 211px;
+    }
 
     @include m.vp-767 {
       text-align: center;
       align-items: center;
-      padding: 40px;
+      padding: 30px 40px 25px;
     }
 
     h3 {
@@ -102,8 +115,7 @@
     }
 
     p {
-      margin-top: 20px;
-      line-height: 140%;
+      line-height: 150%;
     }
 
     a {
@@ -118,7 +130,7 @@
       border-bottom: 1px solid #1c3374;
 
       @include m.vp-767 {
-        margin-top: 40px;
+        margin-top: 28px;
       }
     }
   }
@@ -148,19 +160,43 @@
       height: unset;
     }
 
+    .discounts__item-text--special {
+      padding: 33px 20px 46px 45px;
+
+      @include m.vp-1200 {
+        padding-bottom: 47px;
+      }
+
+      @include m.vp-767 {
+        align-items: flex-start;
+
+        padding-bottom: 45px;
+      }
+    }
+
     h3 {
       font-size: 28px;
       line-height: 156%;
+
+      @include m.vp-767 {
+        padding-left: 29px;
+      }
     }
 
     b {
       font-size: 70px;
-      line-height: 156%;
+      line-height: 86%;
     }
 
     p {
+      margin-top: 16px;
       font-size: 18px;
       line-height: 140%;
+
+      @include m.vp-767 {
+        margin-top: 12px;
+        margin-right: 24px;
+      }
     }
 
     a {
@@ -168,6 +204,13 @@
       line-height: 100%;
 
       border-bottom: 1px solid v.$color-default-white;
+
+      @include m.vp-767 {
+        align-self: center;
+
+        margin-top: 33px;
+        margin-right: 25px;
+      }
     }
   }
 

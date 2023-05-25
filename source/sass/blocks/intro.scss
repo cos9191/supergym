@@ -246,7 +246,7 @@
       border-bottom: 8px solid transparent;
       border-left: 12px solid #ffffff;
 
-      transform: translate(calc(-50% + 1px),-50%);
+      transform: translate(calc(-50% + 1px), -50%);
 
       @include m.vp-1200 {
         border-top: 6px solid transparent;
