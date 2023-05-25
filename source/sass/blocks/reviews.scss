@@ -3,14 +3,14 @@
 
 .reviews {
   &__container {
-    padding: 56px 103px 120px;
+    padding: 57px 103px 120px;
 
     @include m.vp-1200 {
-      padding: 50px 101px 100px;
+      padding: 43px 101px 100px;
     }
 
     @include m.vp-767 {
-      padding: 20px 47px 70px;
+      padding: 33px 47px 69px;
     }
   }
 
@@ -22,6 +22,7 @@
 
   h2 {
     text-align: center;
+    padding-left: 9px;
 
     font-family: v.$ff-alumni;
     font-weight: 600;
@@ -30,11 +31,16 @@
     letter-spacing: 0.03em;
 
     @include m.vp-1200 {
+      padding-left: 0;
+      padding-right: 5px;
+
       font-size: 42px;
       line-height: 50.4px;
     }
 
     @include m.vp-767 {
+      padding-right: 3px;
+
       font-size: 32px;
       line-height: 38.4px;
     }
@@ -56,16 +62,18 @@
   }
 
   &__swiper {
-    margin-top: 48px;
+    margin-top: 36px;
     width: 560px;
 
     color: v.$color-default-white;
 
     @include m.vp-1200 {
+      margin-top: 39px;
       width: 566px;
     }
 
     @include m.vp-767 {
+      margin-top: 42px;
       max-width: 100%;
     }
   }
@@ -73,15 +81,20 @@
   &__swiper-slide {
     display: grid;
     grid-template-columns: minmax(10px, 80px) minmax(10px, auto);
-    gap: 20px 30px;
+    gap: 11px 30px;
 
-    padding: 62px;
+    padding: 55px 61px 57px 59px;
     background: v.$color-swiper-reviews-bg;
+
+    @include m.vp-1200 {
+      gap: 11px 34px;
+    }
 
     @include m.vp-767 {
       grid-template-columns: repeat(2, minmax(10px, 1fr));
+      gap: 14px 10px;
 
-      padding: 40px 25px;
+      padding: 41px 25px 35px;
     }
 
     h3 {
@@ -91,8 +104,9 @@
       line-height: 150%;
 
       @include m.vp-767 {
-        justify-self: flex-start;
         align-self: center;
+        padding-left: 6px;
+
         line-height: 130%;
       }
     }
@@ -103,6 +117,7 @@
 
       @include m.vp-767 {
         grid-column: span 2;
+        text-align: center;
       }
     }
   }
@@ -110,19 +125,23 @@
   &__swiper-img {
     position: relative;
     grid-row: span 2;
-    align-self: center;
 
+    margin: 7px 0 0 3px;
     width: 80px;
     height: 80px;
 
     background-color: v.$color-default-white;
     border-radius: 50%;
 
+    @include m.vp-1200 {
+      margin: 7px 0 0 6px;
+    }
+
     @include m.vp-767 {
       grid-row: unset;
       justify-self: flex-end;
-      align-self: center;
 
+      margin: 0;
       width: 68px;
       height: 68px;
     }
@@ -136,6 +155,15 @@
       height: calc(100% + 2px);
 
       transform: translate(-1px, -1px);
+    }
+  }
+
+  &__swiper-button-prev,
+  &__swiper-button-next {
+    top: 42%;
+
+    @include m.vp-1200 {
+      top: 50%;
     }
   }
 }
