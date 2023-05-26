@@ -2176,7 +2176,6 @@ swiper-container:not(.swiper-watch-progress) .swiper-lazy-preloader,
 
 .header {
   min-height: 658px;
-  height: 658px;
   color: #ffffff;
   background: conic-gradient(from 150.87deg at 16.03% 39.06%, #b80027 -46.69deg, #003d85 32.24deg, #b80027 313.31deg, #003d85 392.24deg);
 }
@@ -2291,6 +2290,9 @@ swiper-container:not(.swiper-watch-progress) .swiper-lazy-preloader,
   -ms-grid-column: 3;
   grid-area: city;
   text-align: end;
+  -webkit-transform: translate(1px, 2px);
+  -ms-transform: translate(1px, 2px);
+  transform: translate(1px, 2px);
   padding-top: 90px;
   padding-right: 50px;
   font-family: "Alumni Sans", "Arial", sans-serif;
@@ -2306,7 +2308,10 @@ swiper-container:not(.swiper-watch-progress) .swiper-lazy-preloader,
   grid-area: title;
   margin: 0;
   padding-top: 0;
-  padding-bottom: 31px;
+  padding-bottom: 30px;
+  -webkit-transform: translateX(2px);
+  -ms-transform: translateX(2px);
+  transform: translateX(2px);
   text-align: end;
   text-transform: uppercase;
   font-family: "Alumni Sans", "Arial", sans-serif;
@@ -2314,7 +2319,7 @@ swiper-container:not(.swiper-watch-progress) .swiper-lazy-preloader,
   line-height: 110.4px;
   font-weight: 600;
   letter-spacing: 0.05em;
-  -webkit-text-stroke: 2px #ffffff;
+  -webkit-text-stroke: 3px #ffffff;
 }
 
 .header__membership-btn {
@@ -2330,6 +2335,9 @@ swiper-container:not(.swiper-watch-progress) .swiper-lazy-preloader,
   display: inline-block;
   padding: 20px;
   width: 100%;
+  -webkit-transform: translateX(2px);
+  -ms-transform: translateX(2px);
+  transform: translateX(2px);
   text-align: center;
   text-transform: uppercase;
   font-weight: 700;
@@ -2630,10 +2638,8 @@ swiper-container:not(.swiper-watch-progress) .swiper-lazy-preloader,
   display: -ms-grid;
   display: grid;
   gap: 40px;
-  -ms-grid-columns: (minmax(-webkit-min-content, auto))[3];
-  -ms-grid-columns: (minmax(min-content, auto))[3];
-  grid-template-columns: repeat(3, minmax(-webkit-min-content, auto));
-  grid-template-columns: repeat(3, minmax(min-content, auto));
+  -ms-grid-columns: (minmax(10px, 1fr))[3];
+  grid-template-columns: repeat(3, minmax(10px, 1fr));
   list-style-type: none;
   margin: 0;
   padding-left: 0;
@@ -2646,10 +2652,8 @@ swiper-container:not(.swiper-watch-progress) .swiper-lazy-preloader,
   -webkit-box-pack: center;
   -ms-flex-pack: center;
   justify-content: center;
-  -ms-grid-columns: minmax(-webkit-min-content, auto);
-  -ms-grid-columns: minmax(min-content, auto);
-  grid-template-columns: minmax(-webkit-min-content, auto);
-  grid-template-columns: minmax(min-content, auto);
+  -ms-grid-columns: minmax(10px, 1fr);
+  grid-template-columns: minmax(10px, 1fr);
   padding: 52px 70px 60px;
   border: 7px solid transparent;
   border-image-slice: 1;
@@ -2675,17 +2679,15 @@ swiper-container:not(.swiper-watch-progress) .swiper-lazy-preloader,
   position: relative;
   z-index: 0;
   margin-top: 66px;
-  margin-left: 3px;
   color: #103aae;
   font-weight: 700;
   font-size: 60px;
   line-height: 90px;
 }
 
-.tabs__element span mark {
-  margin-left: -17px;
+.tabs__element span svg {
   color: #102654;
-  background-color: transparent;
+  margin-left: -13px;
 }
 
 .tabs__element span::before {
@@ -2932,7 +2934,7 @@ swiper-container:not(.swiper-watch-progress) .swiper-lazy-preloader,
 }
 
 .staff__container {
-  padding: 58px 103px 140px;
+  padding: 56px 103px 140px;
 }
 
 .staff h2,
@@ -3651,6 +3653,7 @@ swiper-container:not(.swiper-watch-progress) .swiper-lazy-preloader,
   width: -webkit-fit-content;
   width: -moz-fit-content;
   width: fit-content;
+  max-width: 250px;
   text-transform: uppercase;
   font-family: "Alumni Sans", "Arial", sans-serif;
   font-weight: 600;
@@ -3855,7 +3858,6 @@ swiper-container:not(.swiper-watch-progress) .swiper-lazy-preloader,
 
   .header {
     min-height: 554px;
-    height: 554px;
     background: conic-gradient(from 155.49deg at 20.7% 35.74%, #b80027 -46.69deg, #003d85 32.24deg, #b80027 313.31deg, #003d85 392.24deg);
   }
 
@@ -3908,6 +3910,9 @@ swiper-container:not(.swiper-watch-progress) .swiper-lazy-preloader,
   }
 
   .header__membership-city {
+    -webkit-transform: translate(-1px, -1px);
+    -ms-transform: translate(-1px, -1px);
+    transform: translate(-1px, -1px);
     padding-top: 45px;
     padding-right: 7px;
     font-size: 34px;
@@ -3915,16 +3920,18 @@ swiper-container:not(.swiper-watch-progress) .swiper-lazy-preloader,
   }
 
   .header__membership-title {
+    -webkit-transform: translateX(0);
+    -ms-transform: translateX(0);
+    transform: translateX(0);
     margin-right: 5px;
     text-transform: unset;
     font-size: 72px;
     line-height: 86.4px;
-    letter-spacing: 0.04em;
   }
 
   .header__membership-btn {
     padding-bottom: 22px;
-    margin-right: 4px;
+    margin-right: 6px;
     min-width: 185px;
   }
 
@@ -4021,8 +4028,8 @@ swiper-container:not(.swiper-watch-progress) .swiper-lazy-preloader,
   }
 
   .tabs__element ol {
-    -ms-grid-columns: (minmax(442px, auto))[1];
-    grid-template-columns: repeat(1, minmax(442px, auto));
+    -ms-grid-columns: (minmax(10px, 442px))[1];
+    grid-template-columns: repeat(1, minmax(10px, 442px));
     -webkit-box-pack: center;
     -ms-flex-pack: center;
     justify-content: center;
@@ -4457,12 +4464,11 @@ swiper-container:not(.swiper-watch-progress) .swiper-lazy-preloader,
 
   .header {
     min-height: 491px;
-    height: 491px;
     background: conic-gradient(from 167.26deg at 35.31% 34.22%, #b80027 -46.69deg, #003d85 32.24deg, #b80027 313.31deg, #003d85 392.24deg);
   }
 
   .header__container {
-    padding: 17px 15px 80px;
+    padding: 17px 15px 78px;
   }
 
   .header__logo {
@@ -4504,7 +4510,6 @@ swiper-container:not(.swiper-watch-progress) .swiper-lazy-preloader,
 
   .header__membership-title {
     margin-right: 0;
-    padding-right: 2px;
     padding-top: 13px;
     padding-bottom: 0;
     -webkit-text-stroke: 4px #ffffff;
@@ -4535,7 +4540,7 @@ swiper-container:not(.swiper-watch-progress) .swiper-lazy-preloader,
   }
 
   .header__membership-btn {
-    margin-right: -2px;
+    margin-right: 5px;
     padding-top: 23px;
     padding-bottom: 0;
     width: 100%;
@@ -4543,7 +4548,6 @@ swiper-container:not(.swiper-watch-progress) .swiper-lazy-preloader,
   }
 
   .header__membership-btn a {
-    margin-left: -5px;
     width: 102%;
   }
 
@@ -4629,8 +4633,6 @@ swiper-container:not(.swiper-watch-progress) .swiper-lazy-preloader,
 
   .tabs__element ol {
     gap: 35px;
-    -ms-grid-columns: (minmax(10px, 442px))[1];
-    grid-template-columns: repeat(1, minmax(10px, 442px));
   }
 
   .tabs__element li {
@@ -4649,8 +4651,9 @@ swiper-container:not(.swiper-watch-progress) .swiper-lazy-preloader,
     line-height: 72px;
   }
 
-  .tabs__element span mark {
-    margin-left: -14px;
+  .tabs__element span svg {
+    width: 24px;
+    height: 33px;
   }
 
   .tabs__element span::before {
