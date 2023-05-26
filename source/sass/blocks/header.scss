@@ -3,7 +3,6 @@
 
 .header {
   min-height: 658px;
-  height: 658px;
 
   color: v.$color-default-white;
   background: conic-gradient(
@@ -16,7 +15,6 @@
 
   @include m.vp-1200 {
     min-height: 554px;
-    height: 554px;
 
     background: conic-gradient(
       from 155.49deg at 20.7% 35.74%,
@@ -29,7 +27,6 @@
 
   @include m.vp-767 {
     min-height: 491px;
-    height: 491px;
 
     background: conic-gradient(
       from 167.26deg at 35.31% 34.22%,
@@ -59,7 +56,7 @@
     }
 
     @include m.vp-767 {
-      padding: 17px 15px 80px;
+      padding: 17px 15px 78px;
     }
   }
 
@@ -235,6 +232,8 @@
     grid-area: city;
 
     text-align: end;
+    transform: translate(1px, 2px);
+
     padding-top: 90px;
     padding-right: 50px;
 
@@ -245,6 +244,8 @@
     letter-spacing: 0.03em;
 
     @include m.vp-1200 {
+      transform: translate(-1px, -1px);
+
       padding-top: 45px;
       padding-right: 7px;
 
@@ -266,7 +267,9 @@
 
     margin: 0;
     padding-top: 0;
-    padding-bottom: 31px;
+    padding-bottom: 30px;
+
+    transform: translateX(2px);
     text-align: end;
     text-transform: uppercase;
 
@@ -275,22 +278,22 @@
     line-height: 110.4px;
     font-weight: 600;
     letter-spacing: 0.05em;
-    -webkit-text-stroke: 2px v.$color-default-white;
+    -webkit-text-stroke: 3px v.$color-default-white;
 
     @include m.vp-1200 {
+      transform: translateX(0);
       margin-right: 5px;
 
       text-transform: unset;
       font-size: 72px;
       line-height: 86.4px;
-      letter-spacing: 0.04em;
     }
 
     @include m.vp-767 {
       margin-right: 0;
-      padding-right: 2px;
       padding-top: 13px;
       padding-bottom: 0;
+
       -webkit-text-stroke: 4px v.$color-default-white;
       letter-spacing: 0.05em;
     }
@@ -305,12 +308,12 @@
 
     @include m.vp-1200 {
       padding-bottom: 22px;
-      margin-right: 4px;
+      margin-right: 6px;
       min-width: 185px;
     }
 
     @include m.vp-767 {
-      margin-right: -2px;
+      margin-right: 5px;
       padding-top: 23px;
       padding-bottom: 0;
       width: 100%;
@@ -322,6 +325,8 @@
 
       padding: 20px;
       width: 100%;
+
+      transform: translateX(2px);
       text-align: center;
       text-transform: uppercase;
 
@@ -339,7 +344,6 @@
       }
 
       @include m.vp-767 {
-        margin-left: -5px;
         width: 102%;
       }
     }
