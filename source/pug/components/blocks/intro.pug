@@ -1,16 +1,14 @@
 mixin intro()
   section.intro
     .container.intro__container
-        .intro__column.intro__column--text
+        .intro__column.intro__text
           h2 Тренажерный зал
           h3 Просторный зал площадью 900&nbsp;кв/м
           p Supergym&nbsp;&mdash; самый большой фитнес центр за&nbsp;Уралом и&nbsp;идеальное место для укрепления тела и&nbsp;здоровья. Тренажерный зал оснащен всем необходимым современным оборудованием для всех спортсменов.
           span В&nbsp;зале расположены отдельная зона для Crossfit и&nbsp;кардио-зона с&nbsp;40&nbsp;тренажерами. Также в&nbsp;фитнес центре есть несколько оборудованных залов для различных видов групповых занятий.
-        .intro__column.intro__column--image
+        .intro__column.intro__media
           +picture-adaptive("content/intro", "panorama", "jpg", 660, 401, "Фото спортзала.")
-        .intro__video-wrapper
-          .intro__video-cover(data-cover4video data-video-isShown=false)
-            +picture-adaptive("content/intro", "cover4video", "jpg", 364, 228, "Фото спортзала.")
-          button(aria-label="Play Video" data-play-video-button data-video-isShown=false)
-          .intro__video-container
-            div#player(data-video-player data-video-src="9TZXsZItgdw")
+          .intro__video-wrapper(data-video-player data-video-src="9TZXsZItgdw")
+            .intro__video-cover(data-cover4video data-video-isShown=false)
+              +picture-adaptive("content/intro", "cover4video", "jpg", 364, 228, "Фото спортзала.")
+            button(aria-label="Play Video" data-play-video-button data-video-isShown=false)

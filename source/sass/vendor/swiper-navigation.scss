@@ -80,7 +80,7 @@
     left: var(--swiper-navigation-sides-offset, -40px);
   }
 
-  @include m.vp-1200 {
+  @include m.vp-1199 {
     left: var(--swiper-navigation-sides-offset, -56px);
   }
 
@@ -102,7 +102,7 @@
     right: var(--swiper-navigation-sides-offset, -40px);
   }
 
-  @include m.vp-1200 {
+  @include m.vp-1199 {
     right: var(--swiper-navigation-sides-offset, -56px);
   }
 

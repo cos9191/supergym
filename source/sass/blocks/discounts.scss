@@ -7,7 +7,7 @@
     padding-top: 100px;
     padding-bottom: 60px;
 
-    @include m.vp-1200 {
+    @include m.vp-1199 {
       padding-top: 92px;
       padding-bottom: 50px;
     }
@@ -26,7 +26,7 @@
     line-height: 64.8px;
     letter-spacing: 0.03em;
 
-    @include m.vp-1200 {
+    @include m.vp-1199 {
       padding-right: 9px;
 
       font-size: 42px;
@@ -50,7 +50,7 @@
     margin: 34px 0 0;
     padding-left: 0;
 
-    @include m.vp-1200 {
+    @include m.vp-1199 {
       gap: 29px;
 
       margin: 40px auto 0;
@@ -101,7 +101,7 @@
 
     padding: 19px 21px 29px 28px;
 
-    @include m.vp-1200 {
+    @include m.vp-1199 {
       min-height: 211px;
     }
 
@@ -147,7 +147,7 @@
     color: v.$color-default-white;
     background: #ed0233;
 
-    @include m.vp-1200 {
+    @include m.vp-1199 {
       grid-row: unset;
       grid-column: span 2;
 
@@ -166,7 +166,7 @@
     .discounts__item-text--special {
       padding: 33px 20px 46px 45px;
 
-      @include m.vp-1200 {
+      @include m.vp-1199 {
         padding-bottom: 47px;
       }
 

@@ -20,9 +20,8 @@
       padding: 120px 45px 50px;
     }
 
-    @include m.vp-1200 {
-      grid-template-columns: minmax(10px, 292px) minmax(10px, 386px);
-      grid-template-rows: 292px;
+    @include m.vp-1199 {
+      grid-template-columns: minmax(10px, 292fr) minmax(10px, 386fr);
 
       padding-top: 100px;
     }
@@ -39,7 +38,7 @@
   }
 
   h2 {
-    margin: 9px 0 0 9px;
+    margin: 9px 0 0 0;
     text-align: center;
 
     font-family: v.$ff-alumni;
@@ -48,8 +47,10 @@
     line-height: 78.72px;
     letter-spacing: 0.03em;
 
-    @include m.vp-1200 {
-      margin: 4px 0 0;
+    @include m.vp-1023 {
+      margin: 3px 0 0 7px;
+      text-align: start;
+
       font-size: 48px;
       line-height: 46.08px;
     }
@@ -65,7 +66,7 @@
 
     background-color: v.$color-promo-text-bg;
 
-    @include m.vp-1200 {
+    @include m.vp-1199 {
       padding: 47px 45px 50px;
     }
 
@@ -80,15 +81,16 @@
 
   &__text-row {
     display: grid;
-    grid-template-columns: minmax(117px, min-content) minmax(10px, min-content);
-    gap: 50px;
+    grid-template-columns: minmax(117px, 201px) minmax(10px, 100px);
+    gap: 38px;
 
-    @include m.vp-1200 {
-      gap: 30px;
+    @include m.vp-1023 {
+      grid-template-columns: minmax(117px, 139px) minmax(10px, 100px);
+      gap: 7px;
     }
 
     @include m.vp-767 {
-      gap: 28px;
+      gap: 6px;
     }
 
     @include m.vp-319 {
@@ -99,10 +101,10 @@
 
   &__text-column {
     display: grid;
-    grid-template-columns: min-content;
+    grid-template-columns: 100px;
     gap: 15px;
 
-    @include m.vp-1200 {
+    @include m.vp-1023 {
       gap: 5px;
     }
   }
@@ -118,7 +120,7 @@
     font-size: 18px;
     line-height: 27px;
 
-    @include m.vp-1200 {
+    @include m.vp-1023 {
       margin: 0;
       font-size: 12px;
       line-height: 18px;
@@ -127,27 +129,25 @@
 
   &__value {
     display: flex;
+    flex-wrap: wrap;
     gap: 7px;
 
     margin: 4px 0 0 10px;
     padding-top: 3px;
     width: fit-content;
+    max-width: 100px;
 
-    border-top: 1px solid v.$color-default-white;
-
-    @include m.vp-1200 {
-      gap: 3px;
-      margin: 1px 0 0;
-      padding-top: 2px;
-    }
-  }
-
-  &__value > span {
     font-weight: 700;
     font-size: 40px;
     line-height: 40px;
 
-    @include m.vp-1200 {
+    border-top: 1px solid v.$color-default-white;
+
+    @include m.vp-1023 {
+      gap: 3px;
+      margin: 1px 0 0;
+      padding-top: 2px;
+
       font-size: 24px;
       line-height: 24px;
     }
@@ -159,7 +159,7 @@
 
     margin: 0;
 
-    @include m.vp-1200 {
+    @include m.vp-1023 {
       font-size: 10px;
       line-height: 13px;
     }
@@ -171,11 +171,15 @@
 
     margin: 21px 0 0;
 
-    @include m.vp-1200 {
+    @include m.vp-1023 {
       font-size: 12px;
       line-height: 18px;
 
       margin-top: 7px;
+    }
+
+    @include m.vp-767 {
+      transform: translateX(-7px);
     }
   }
 
@@ -189,7 +193,7 @@
 
     border-width: 4px;
 
-    @include m.vp-1200 {
+    @include m.vp-1023 {
       margin: 30px -1px 0;
       padding: 13px 5px;
 

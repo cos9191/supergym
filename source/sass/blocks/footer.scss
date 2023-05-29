@@ -13,7 +13,7 @@
 
     padding: 37px 104px 30px;
 
-    @include m.vp-1200 {
+    @include m.vp-1199 {
       padding: 39px 45px 33px;
     }
 
@@ -44,7 +44,7 @@
       opacity: 0.6;
     }
 
-    @include m.vp-1200 {
+    @include m.vp-1199 {
       transform: translate(-5px, -5px);
       font-weight: 700;
       font-size: 24px;
@@ -72,7 +72,7 @@
     padding: 0;
     max-width: 500px;
 
-    @include m.vp-1200 {
+    @include m.vp-1199 {
       gap: 10px 20px;
       transform: translate(6px, -4px);
       max-width: 420px;
@@ -125,7 +125,7 @@
     padding: 0;
     max-width: 210px;
 
-    @include m.vp-1200 {
+    @include m.vp-1199 {
       max-width: 150px;
     }
 

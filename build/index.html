@@ -54,7 +54,11 @@
     <div class="wrapper">
       <header class="header">
         <div class="container header__container">
-          <div class="header__top"><a class="header__logo" href="index.html" aria-label="Переход на главную страницу.">Supergym</a><a class="header__phone" href="tel:+78005555555">8-800-555-55-55</a></div>
+          <div class="header__top"><a class="header__logo" href="index.html" aria-label="Переход на главную страницу.">Supergym</a>
+            <ol class="header__contacts">
+              <li class="header__contacts-item"><a class="header__phone" href="tel:+78005555555">8-800-555-55-55</a></li>
+            </ol>
+          </div>
           <div class="header__membership">
             <ul class="header__membership-feature-list">
               <li>Тренажёрный зал</li>
@@ -79,12 +83,12 @@
       <main>
         <section class="intro">
           <div class="container intro__container">
-            <div class="intro__column intro__column--text">
+            <div class="intro__column intro__text">
               <h2>Тренажерный зал</h2>
               <h3>Просторный зал площадью 900&nbsp;кв/м</h3>
               <p>Supergym&nbsp;&mdash; самый большой фитнес центр за&nbsp;Уралом и&nbsp;идеальное место для укрепления тела и&nbsp;здоровья. Тренажерный зал оснащен всем необходимым современным оборудованием для всех спортсменов.</p><span>В&nbsp;зале расположены отдельная зона для Crossfit и&nbsp;кардио-зона с&nbsp;40&nbsp;тренажерами. Также в&nbsp;фитнес центре есть несколько оборудованных залов для различных видов групповых занятий.</span>
             </div>
-            <div class="intro__column intro__column--image">
+            <div class="intro__column intro__media">
               <picture>
                 <source type="image/webp" media="(max-width: 767px)" srcset="img/content/intro/panorama_mobile.webp, img/content/intro/panorama_mobile@2x.webp 2x">
                 <source media="(max-width: 767px)" srcset="img/content/intro/panorama_mobile.jpg, img/content/intro/panorama_mobile@2x.jpg 2x">
@@ -92,20 +96,17 @@
                 <source media="(max-width: 1200px)" srcset="img/content/intro/panorama_tablet.jpg, img/content/intro/panorama_tablet@2x.jpg 2x">
                 <source type="image/webp" srcset="img/content/intro/panorama_desktop.webp, img/content/intro/panorama_desktop@2x.webp 2x"><img src="img/content/intro/panorama_desktop.jpg" srcset="img/content/intro/panorama_desktop@2x.jpg 2x" width="660" height="401" alt="Фото спортзала." loading="lazy">
               </picture>
-            </div>
-            <div class="intro__video-wrapper">
-              <div class="intro__video-cover" data-cover4video>
-                <picture>
-                  <source type="image/webp" media="(max-width: 767px)" srcset="img/content/intro/cover4video_mobile.webp, img/content/intro/cover4video_mobile@2x.webp 2x">
-                  <source media="(max-width: 767px)" srcset="img/content/intro/cover4video_mobile.jpg, img/content/intro/cover4video_mobile@2x.jpg 2x">
-                  <source type="image/webp" media="(max-width: 1200px)" srcset="img/content/intro/cover4video_tablet.webp, img/content/intro/cover4video_tablet@2x.webp 2x">
-                  <source media="(max-width: 1200px)" srcset="img/content/intro/cover4video_tablet.jpg, img/content/intro/cover4video_tablet@2x.jpg 2x">
-                  <source type="image/webp" srcset="img/content/intro/cover4video_desktop.webp, img/content/intro/cover4video_desktop@2x.webp 2x"><img src="img/content/intro/cover4video_desktop.jpg" srcset="img/content/intro/cover4video_desktop@2x.jpg 2x" width="364" height="228" alt="Фото спортзала." loading="lazy">
-                </picture>
-              </div>
-              <button aria-label="Play Video" data-play-video-button></button>
-              <div class="intro__video-container">
-                <div id="player" data-video-player data-video-src="9TZXsZItgdw"></div>
+              <div class="intro__video-wrapper" data-video-player data-video-src="9TZXsZItgdw">
+                <div class="intro__video-cover" data-cover4video>
+                  <picture>
+                    <source type="image/webp" media="(max-width: 767px)" srcset="img/content/intro/cover4video_mobile.webp, img/content/intro/cover4video_mobile@2x.webp 2x">
+                    <source media="(max-width: 767px)" srcset="img/content/intro/cover4video_mobile.jpg, img/content/intro/cover4video_mobile@2x.jpg 2x">
+                    <source type="image/webp" media="(max-width: 1200px)" srcset="img/content/intro/cover4video_tablet.webp, img/content/intro/cover4video_tablet@2x.webp 2x">
+                    <source media="(max-width: 1200px)" srcset="img/content/intro/cover4video_tablet.jpg, img/content/intro/cover4video_tablet@2x.jpg 2x">
+                    <source type="image/webp" srcset="img/content/intro/cover4video_desktop.webp, img/content/intro/cover4video_desktop@2x.webp 2x"><img src="img/content/intro/cover4video_desktop.jpg" srcset="img/content/intro/cover4video_desktop@2x.jpg 2x" width="364" height="228" alt="Фото спортзала." loading="lazy">
+                  </picture>
+                </div>
+                <button aria-label="Play Video" data-play-video-button></button>
               </div>
             </div>
           </div>
@@ -213,13 +214,13 @@
                 <div class="promo__text-column">
                   <div class="promo__date">
                     <div class="promo__key">Дата</div>
-                    <div class="promo__value"><span>7</span>
+                    <div class="promo__value">7
                       <p>Марта<br>2019</p>
                     </div>
                   </div>
                   <div class="promo__time">
                     <div class="promo__key">Время</div>
-                    <div class="promo__value"><span>12:00</span></div>
+                    <div class="promo__value">12:00</div>
                   </div>
                 </div>
               </div>
@@ -499,7 +500,7 @@
               <div class="swiper-button-prev reviews__swiper-button-prev"></div>
               <div class="swiper reviews__swiper">
                 <div class="swiper-wrapper reviews__swiper-wrapper">
-                  <div class="swiper-slide reviews__swiper-slide" tabindex="0">
+                  <div class="swiper-slide reviews__swiper-slide">
                     <div class="reviews__swiper-img">
                       <picture>
                         <source type="image/webp" srcset="img/content/reviews/annao.webp, img/content/reviews/annao@2x.webp 2x"><img src="img/content/reviews/annao.jpg" srcset="img/content/reviews/annao@2x.jpg 2x" width="80" height="80" alt="Анна Орлова, аватарка." loading="lazy">
@@ -508,7 +509,7 @@
                     <h3>Анна Орлова</h3>
                     <p>«Хожу в&nbsp;SuperClub уже больше года. Нравится, что в&nbsp;клубе всегда чисто, тренажеры обновляют, персонал дружелюбный. Зал просторный, даже в&nbsp;вечернее время нет очередей»</p>
                   </div>
-                  <div class="swiper-slide reviews__swiper-slide" tabindex="0">
+                  <div class="swiper-slide reviews__swiper-slide">
                     <div class="reviews__swiper-img">
                       <picture>
                         <source type="image/webp" srcset="img/content/reviews/ivanp.webp, img/content/reviews/ivanp@2x.webp 2x"><img src="img/content/reviews/ivanp.jpg" srcset="img/content/reviews/ivanp@2x.jpg 2x" width="80" height="80" alt="Иван Петров, аватарка." loading="lazy">
@@ -593,7 +594,6 @@
         </div>
       </footer>
     </div>
-    <script src="https://www.youtube.com/iframe_api?api_key=AIzaSyBAh8GocKypBo-lBD8fgheXEk_WX8JQzzw"></script>
     <script src="js/vendor.min.js"></script>
     <script src="js/main.min.js"></script>
   </body>

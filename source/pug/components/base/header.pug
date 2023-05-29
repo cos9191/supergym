@@ -4,7 +4,9 @@ mixin header(headerMods, currentUrl)
     .container.header__container
       .header__top
         a.header__logo(href="index.html", aria-label="Переход на главную страницу.") Supergym
-        a.header__phone(href="tel:+78005555555") 8-800-555-55-55
+        ol.header__contacts
+          li.header__contacts-item
+            a.header__phone(href="tel:+78005555555") 8-800-555-55-55
       .header__membership
         ul.header__membership-feature-list
             li Тренажёрный зал

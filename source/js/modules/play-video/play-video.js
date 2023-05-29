@@ -1,52 +1,43 @@
 export const initPlayVideo = () => {
-  const playButton = document.querySelector('[data-play-video-button]');
-  const coverImage = document.querySelector('[data-cover4video]');
-  const videoUrl = document.querySelector('[data-video-player]').dataset.videoSrc;
+  function findVideos() {
+    let videos = document.querySelectorAll('[data-video-player]');
 
-  if (playButton && coverImage && videoUrl) {
-    let player;
+    for (let i = 0; i < videos.length; i++) {
+      setupVideo(videos[i]);
+    }
+  }
 
-    const onYouTubeIframeAPIReady = () => {
-      // eslint-disable-next-line no-undef
-      player = new YT.Player('player', {
-        height: '100%',
-        width: '100%',
-        videoId: videoUrl,
-        playerVars: {
-          'playsinline': 1,
-        },
-        events: {
-          'onReady': onPlayerReady,
-          'onStateChange': onPlayerStateChange,
-        },
-      });
-    };
+  function setupVideo(video) {
+    let media = video.querySelector('[data-cover4video]');
+    let button = video.querySelector('[data-play-video-button]');
+    let id = video.getAttribute('data-video-src');
 
-    const onPlayerReady = () => {
-      playButton.addEventListener('click', () => {
-        player.playVideo();
-        coverImage.dataset.videoIsshown = true;
-        playButton.dataset.videoIsshown = true;
-      });
-    };
+    video.addEventListener('click', () => {
+      let iframe = createIframe(id);
 
-    const onPlayerStateChange = (event) => {
-      // eslint-disable-next-line no-undef
-      if (event.data === YT.PlayerState.ENDED) {
-        endedVideo();
-      }
-    };
-
-    const endedVideo = () => {
-      coverImage.dataset.videoIsshown = false;
-      playButton.dataset.videoIsshown = false;
-    };
-
-    playButton.addEventListener('click', function () {
-      playButton.dataset.videoIsshown = true;
-      coverImage.dataset.videoIsshown = true;
+      button.remove();
+      media.remove();
+      video.appendChild(iframe);
     });
 
-    onYouTubeIframeAPIReady();
+    video.classList.add('video--enabled');
   }
+
+  function createIframe(id) {
+    let iframe = document.createElement('iframe');
+
+    iframe.setAttribute('allowfullscreen', '');
+    iframe.setAttribute('allow', 'autoplay');
+    iframe.setAttribute('src', generateURL(id));
+    iframe.classList.add('video__media');
+
+    return iframe;
+  }
+
+  function generateURL(id) {
+    let query = '?rel=0&showinfo=0&autoplay=1';
+    return 'https://www.youtube.com/embed/' + id + query;
+  }
+
+  findVideos();
 };

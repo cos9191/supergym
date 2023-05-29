@@ -103,7 +103,7 @@
   .input-message {
     position: absolute;
     right: 3px;
-    bottom: 2px;
+    bottom: -16px;
 
     &.is-invalid {
       color: inherit;

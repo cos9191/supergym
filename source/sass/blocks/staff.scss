@@ -21,7 +21,7 @@
       padding: 56px 45px 140px;
     }
 
-    @include m.vp-1200 {
+    @include m.vp-1199 {
       padding: 50px 101px 100px;
     }
 
@@ -42,7 +42,7 @@
     line-height: 64.8px;
     letter-spacing: 0.03em;
 
-    @include m.vp-1200 {
+    @include m.vp-1199 {
       padding-right: 6px;
       text-align: center;
       font-size: 42px;
@@ -62,9 +62,10 @@
     max-width: 1160px;
     margin: 0 auto;
 
-    @include m.vp-1200 {
+    @include m.vp-1199 {
       margin-top: -17px;
-      max-width: 566px;
+      //max-width: 566px;
+      max-width: 100%;
     }
 
     @include m.vp-767 {
@@ -78,8 +79,9 @@
 
     color: v.$color-default-white;
 
-    @include m.vp-1200 {
-      max-width: 566px;
+    @include m.vp-1199 {
+      //max-width: 566px;
+      max-width: 100%;
     }
 
     @include m.vp-767 {
@@ -97,7 +99,9 @@
   justify-content: center;
   text-align: center;
 
-  max-height: 294px;
+  @include m.vp-1023 {
+    aspect-ratio: 268 / 294;
+  }
 
   @include m.vp-767 {
     max-width: 700px;
@@ -132,7 +136,7 @@
 
     h3,
     p {
-      @include m.vp-1200 {
+      @include m.vp-1199 {
         padding-right: 16px;
       }
 
@@ -142,7 +146,15 @@
     }
 
     ul {
-      padding-left: 30px;
+      padding-left: 48px;
+
+      @include m.vp-1199 {
+        padding-left: 50px;
+      }
+
+      @include m.vp-767 {
+        padding-left: 30px;
+      }
     }
   }
 
@@ -153,29 +165,48 @@
 
   .swiper-slide__img {
     position: relative;
+
+    &::before {
+      position: absolute;
+      content: "";
+      display: block;
+
+      top: 0;
+      height: 100%;
+      width: 100%;
+
+      box-shadow: 0 0 35px rgba(42, 59, 99, 0.17) inset;
+    }
+
+    &::after {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+
+      background: v.$color-font-blue;
+      display: none;
+      opacity: 0;
+    }
   }
 
   .swiper-slide__img img {
     min-width: 100%;
+    background-color: v.$color-swiper-theme;
+
+
+    @include m.vp-1023 {
+      aspect-ratio: 268/294;
+    }
 
     @include m.vp-767 {
+      aspect-ratio: unset;
       width: 100%;
       max-width: unset;
       height: 100%;
     }
-  }
-
-  .swiper-slide__img::after {
-    content: "";
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-
-    background: v.$color-font-blue;
-    display: none;
-    opacity: 0;
   }
 
   .swiper-slide__content {
@@ -193,7 +224,7 @@
       padding: 22px 10px;
     }
 
-    @include m.vp-1200 {
+    @include m.vp-1199 {
       padding: 22px 12px 22px 20px;
     }
   }

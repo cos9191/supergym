@@ -8,26 +8,26 @@
 .tabs__controls {
   display: flex;
   justify-content: space-between;
-  gap: 46px;
+  gap: 49px;
 
-  margin: 20px auto 0;
+  margin: 19px auto 0;
   width: fit-content;
 
   border-bottom: 2px solid rgba(120, 120, 120, 0.2);
 
-  @include m.vp-1200 {
-    gap: 55px;
+  @include m.vp-1199 {
+    gap: 59px;
     margin-top: 21px;
+    transform: translateX(-1px);
   }
 
   @include m.vp-767 {
-    gap: 2%;
+    gap: 1px;
     flex-wrap: wrap;
 
-    padding-left: unset;
-
-    width: 100%;
+    width: 99%;
     max-width: 442px;
+    transform: translateX(-2px);
   }
 }
 
@@ -41,6 +41,7 @@
 
   opacity: 0.5;
   text-transform: unset;
+  font-weight: 300;
   font-size: 18px;
   line-height: 150%;
 
@@ -49,7 +50,7 @@
 
   transition: opacity v.$trans-default;
 
-  @include m.vp-1200 {
+  @include m.vp-1199 {
     font-size: 18px;
     line-height: 27px;
     letter-spacing: -0.01em;
@@ -83,7 +84,7 @@
   margin-top: 38px;
   transition: height 0.3s;
 
-  @include m.vp-1200 {
+  @include m.vp-1199 {
     margin-top: 44px;
   }
 
@@ -104,7 +105,7 @@
     margin: 0;
     padding-left: 0;
 
-    @include m.vp-1200 {
+    @include m.vp-1199 {
       grid-template-columns: repeat(1, minmax(10px, 442px));
       justify-content: center;
     }
@@ -130,7 +131,7 @@
       padding: 48px 35px;
     }
 
-    @include m.vp-1200 {
+    @include m.vp-1199 {
       padding: 57px 70px 62px;
     }
 
@@ -153,7 +154,7 @@
     font-size: 26px;
     line-height: 39.61px;
 
-    @include m.vp-1200 {
+    @include m.vp-1199 {
       line-height: 28.64px;
     }
 
@@ -167,7 +168,7 @@
     margin: 4px 0 0;
     color: v.$color-tabs-info;
 
-    @include m.vp-1200 {
+    @include m.vp-1199 {
       margin-top: 9px;
     }
   }
@@ -195,10 +196,10 @@
       color: v.$color-font-blue;
       margin-left: -13px;
 
-         @include m.vp-767 {
-           width: 24px;
-           height: 33px;
-        }
+      @include m.vp-767 {
+        width: 24px;
+        height: 33px;
+      }
     }
   }
 

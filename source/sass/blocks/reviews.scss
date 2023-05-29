@@ -5,7 +5,7 @@
   &__container {
     padding: 57px 103px 120px;
 
-    @include m.vp-1200 {
+    @include m.vp-1199 {
       padding: 43px 101px 100px;
     }
 
@@ -30,7 +30,7 @@
     line-height: 64.8px;
     letter-spacing: 0.03em;
 
-    @include m.vp-1200 {
+    @include m.vp-1199 {
       padding-left: 0;
       padding-right: 5px;
 
@@ -52,7 +52,7 @@
     margin: 0 auto;
     max-width: 560px;
 
-    @include m.vp-1200 {
+    @include m.vp-1199 {
       max-width: 566px;
     }
 
@@ -67,7 +67,7 @@
 
     color: v.$color-default-white;
 
-    @include m.vp-1200 {
+    @include m.vp-1199 {
       margin-top: 39px;
       width: 566px;
     }
@@ -86,7 +86,7 @@
     padding: 55px 61px 57px 59px;
     background: v.$color-swiper-reviews-bg;
 
-    @include m.vp-1200 {
+    @include m.vp-1199 {
       gap: 11px 34px;
     }
 
@@ -133,7 +133,7 @@
     background-color: v.$color-default-white;
     border-radius: 50%;
 
-    @include m.vp-1200 {
+    @include m.vp-1199 {
       margin: 7px 0 0 6px;
     }
 
@@ -160,7 +160,7 @@
 
   &__swiper-button-prev,
   &__swiper-button-next {
-    @include m.vp-1200 {
+    @include m.vp-1199 {
       top: 42%;
     }
 
