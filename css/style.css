@@ -3698,6 +3698,9 @@ swiper-container:not(.swiper-watch-progress) .swiper-lazy-preloader,
   margin: 0;
   padding: 0;
   max-width: 210px;
+  -webkit-transform: translate(4px, -2px);
+  -ms-transform: translate(4px, -2px);
+  transform: translate(4px, -2px);
 }
 
 .footer__socials-list a {
@@ -4377,6 +4380,9 @@ swiper-container:not(.swiper-watch-progress) .swiper-lazy-preloader,
 
   .footer__socials-list {
     max-width: 150px;
+    -webkit-transform: translate(10px, 0);
+    -ms-transform: translate(10px, 0);
+    transform: translate(10px, 0);
   }
 }
 
@@ -5106,6 +5112,9 @@ swiper-container:not(.swiper-watch-progress) .swiper-lazy-preloader,
   .footer__socials-list {
     margin-top: 19px;
     margin-left: -5px;
+    -webkit-transform: translate(0, 0);
+    -ms-transform: translate(0, 0);
+    transform: translate(0, 0);
   }
 }
 
