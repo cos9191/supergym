@@ -45,7 +45,8 @@
     }
 
     @include m.vp-1199 {
-      padding: 100px 45px;
+      //padding: 100px 45px;
+      padding: 100px 21.22%;
     }
 
     @include m.vp-767 {

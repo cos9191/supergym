@@ -53,7 +53,7 @@
     max-width: 560px;
 
     @include m.vp-1199 {
-      max-width: 566px;
+      max-width: unset;
     }
 
     @include m.vp-767 {
@@ -69,7 +69,7 @@
 
     @include m.vp-1199 {
       margin-top: 39px;
-      width: 566px;
+      width: unset;
     }
 
     @include m.vp-767 {
@@ -84,7 +84,9 @@
     gap: 11px 30px;
 
     padding: 55px 61px 57px 59px;
+
     background: v.$color-swiper-reviews-bg;
+    box-shadow: 0 0 40px rgba(28, 51, 116, 0.2);
 
     @include m.vp-1199 {
       gap: 11px 34px;
@@ -160,12 +162,10 @@
 
   &__swiper-button-prev,
   &__swiper-button-next {
-    @include m.vp-1199 {
-      top: 42%;
-    }
+    top: 121px;
 
-    @include m.vp-767 {
-      top: 50%;
+    @include m.vp-374 {
+      top: 165px;
     }
   }
 }

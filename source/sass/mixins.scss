@@ -76,14 +76,14 @@
   }
 }
 
-@mixin vp-767 {
-  @media (max-width: (v.$vp-768 - 1px)) {
+@mixin vp-769 {
+  @media (max-width: (v.$vp-768 + 1px)) {
     @content;
   }
 }
 
-@mixin vp-769 {
-  @media (max-width: (v.$vp-768 + 1px)) {
+@mixin vp-767 {
+  @media (max-width: (v.$vp-768 - 1px)) {
     @content;
   }
 }

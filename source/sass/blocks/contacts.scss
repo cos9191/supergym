@@ -209,6 +209,10 @@
       }
     }
 
+    a {
+      display: inline-block;
+    }
+
     li:nth-child(odd) {
       padding-right: 10px;
       border-right: 1px solid v.$color-contacts-border;

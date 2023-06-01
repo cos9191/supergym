@@ -106,9 +106,10 @@
     padding-left: 0;
 
     @include m.vp-1199 {
-      grid-template-columns: repeat(1, minmax(10px, 442px));
+      //grid-template-columns: repeat(1, minmax(10px, 442px));
+      grid-template-columns: repeat(1, minmax(10px, 1fr));
       justify-content: center;
-    }
+          }
 
     @include m.vp-767 {
       gap: 35px;

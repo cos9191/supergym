@@ -8,8 +8,7 @@
     padding-bottom: 60px;
 
     @include m.vp-1199 {
-      padding-top: 92px;
-      padding-bottom: 50px;
+      padding: 92px 5.86% 50px;
     }
 
     @include m.vp-767 {
@@ -54,7 +53,7 @@
       gap: 29px;
 
       margin: 40px auto 0;
-      max-width: 678px;
+      //max-width: 678px;
       width: 100%;
     }
 
@@ -151,7 +150,7 @@
       grid-row: unset;
       grid-column: span 2;
 
-      grid-template-columns: minmax(10px, 279px)  minmax(10px, 399px);
+      grid-template-columns: minmax(10px, 1fr)  minmax(10px, 399px);
 
       height: 462px;
     }
